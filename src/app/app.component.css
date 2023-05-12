@@ -1,0 +1,335 @@
+@import url('https://fons.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
+
+
+.box{
+    height: auto;
+    padding-top: 2%;
+    background-color: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-bottom: 0.75rem;
+    padding: 25px;
+    width: 80%;
+    
+  }
+.block-head{
+    
+    position: absolute;
+    padding-bottom: 100px;
+
+}
+
+section{
+   display: flex;
+   justify-content: center;
+   margin-top: 1rem;
+ 
+  }
+  .box-skills{
+  
+    padding-top: 2%;
+    background-color: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-bottom: 0.75rem;
+    padding: 25px;
+   
+  
+    
+  }
+  
+  .skill-container{
+    padding: 20rem, 20rem;
+  }
+  
+  button img{
+    margin-left: 1rem;
+    }
+    
+    .btn-style:hover{
+      background-color: #3592d5;
+      border-color: #3592d5;
+  }
+  
+  .btn-exit:hover{
+      background-color: rgb(194, 38, 38);
+      border-color: rgb(194, 38, 38);
+  }
+  .btn-exit{
+      background-color: brown; 
+      border-radius: 20px;
+      border: 1px solid brown;
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 12px 45px;
+      box-shadow: 2px 12px 12px 2px rgba(0, 0, 0, 0.1);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: transform 80ms ease-in;
+  }
+  
+app-circulo{
+    margin: 2rem 1rem;
+}
+
+.btn-style{
+  border-radius: 20px;
+  border: 1px solid #1274bb;
+  background-color: #1274bb;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  box-shadow: 2px 12px 12px 2px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+                  
+}
+
+.btn-style:hover{
+  background-color: #3592d5;
+  border-color: #3592d5;
+}
+
+.btn-exit:hover{
+  background-color: rgb(194, 38, 38);
+  border-color: rgb(194, 38, 38);
+}
+
+/*Skills*/
+.skill{
+  width: 160px;
+  height: 160px; 
+  position: relative; float: left; display: flex; 
+ } 
+
+.outer{
+ height: 160px;
+ width: 160px;
+ border-radius: 50%; 
+ padding: 20px;
+ box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+ 
+} 
+
+.inner{
+ height: 120px;
+ width: 120px;
+ border-radius: 50%; 
+ display: flex; 
+ align-items: center; 
+ justify-content: center; 
+ box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0px rgba(255, 255, 255, 1), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05); 
+} 
+
+#number{ 
+ font-weight: 600px; 
+ color:#555; 
+} 
+
+circle{ 
+ fill: none; 
+ stroke: url(#GradientColor);
+ stroke-width: 20px; 
+ stroke-dasharray: 472; 
+ stroke-dashoffset: 472; 
+ animation: anim 2s linear forwards; 
+} 
+
+svg{ position: absolute; 
+ top: 0; 
+ left: 0; 
+} 
+
+@keyframes anim{ 
+ 
+ 100%{ 
+     stroke-dashoffset: 120; 
+ } 
+} 
+
+.cointeiner{ 
+ padding: 1em; 
+ overflow: hidden; 
+ float: left; 
+} @keyframes html{ 
+ 100%{ 
+     stroke-dashoffset: 200; 
+     } 
+ } 
+ 
+.skill .html svg circle{ 
+ fill: none; 
+ stroke: rgb(230, 60, 26); 
+ stroke-width: 20px;
+ stroke-dasharray: 472; 
+ stroke-dashoffset: 472; 
+ animation: html 2s linear forwards; 
+} 
+
+@keyframes css{ 
+ 100%{ 
+     stroke-dashoffset: 500; 
+ } 
+} 
+
+.skill .css svg circle{ 
+ fill: none; stroke: rgb(3, 131, 156); 
+ stroke-width: 20px; 
+ stroke-dasharray: 472; 
+ stroke-dashoffset: 472; 
+ animation: css 2s linear forwards; 
+} @keyframes java{ 
+ 100%{ 
+     stroke-dashoffset: 500;
+  } 
+} .skill .java svg circle{ 
+ fill: none; 
+ stroke: rgb(220, 140, 0); 
+ stroke-width: 20px; 
+ stroke-dasharray: 472; 
+ stroke-dashoffset: 472; 
+ animation: java 2s linear forwards; 
+} 
+
+@keyframes js{ 
+ 100%{ 
+     stroke-dashoffset: 500; 
+     } 
+} 
+
+.skill .js svg circle{ 
+ fill: none; 
+ stroke: rgb(233, 248, 35); 
+ stroke-width: 20px; 
+ stroke-dasharray: 472; 
+ stroke-dashoffset: 472; 
+ animation: js 2s linear forwards; 
+} 
+
+@keyframes english{ 
+ 100%{ 
+     stroke-dashoffset: 500; } 
+ } 
+ 
+.skill .english svg circle{ 
+ fill: none; 
+ stroke: rgb(113, 202, 98); 
+ stroke-width: 20px; 
+ stroke-dasharray: 472; 
+ stroke-dashoffset: 472; 
+ animation: english 2s linear forwards;
+} 
+
+@keyframes comunicacion{ 
+ 100%{ 
+     stroke-dashoffset: 500; 
+     } 
+ } 
+ 
+.skill .comunicacion svg circle{ 
+ fill: none; 
+ stroke: rgb(171, 227, 154); 
+ stroke-width: 20px; 
+ stroke-dasharray: 472; 
+ stroke-dashoffset: 472; 
+ animation: comunicacion 2s linear forwards; 
+}
+
+@keyframes scrum{ 
+ 100%{ 
+     stroke-dashoffset: 500; 
+ } 
+} 
+.skill .scrum svg circle{ 
+ fill: none; 
+ stroke: rgb(96, 114, 235); 
+ stroke-width: 20px;
+ stroke-dasharray: 472; 
+ stroke-dashoffset: 472; 
+ animation: scrum 2s linear forwards; 
+} 
+@keyframes Adaptabilidad{ 
+ 100%{ 
+     stroke-dashoffset: 500 
+ } 
+} .skill .Adaptabilidad svg circle{ 
+ fill: none; 
+ stroke: rgb(3, 163, 184); 
+ stroke-width: 20px; 
+ stroke-dasharray: 472; 
+ stroke-dashoffset: 472; 
+ animation: Adaptabilidad 2s linear forwards; 
+} 
+.contenedor-skills .skill{ margin:2rem 1rem; 
+ display: flex; 
+} 
+
+.text-skill{ 
+ display: flex; 
+ justify-content: center;
+  margin: 2rem; 
+ } 
+ 
+.mt{ 
+ margin-top: 4rem; 
+}
+.background-modal-card{
+  background-color: #84b7db;
+  border-radius: 20px 20px;
+  box-shadow: 0.5px 0.5px 10px;
+  padding: 20px;
+ 
+}
+.modal-title{
+  color: #fff;
+  background-color: #1274bb;
+  border-radius: 35px 35px;
+  box-shadow: 0.5px 0.5px 10px rgba(0, 0, 0, .5);
+  padding: 10px 20px;
+ 
+  
+ 
+}.card-style{
+  width: 22rem;
+  
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
+  }
+  
+  .container-proyects{
+      display: flex;
+      
+      padding: 1rem 5rem;
+      
+  }
+  .card {
+      margin: 2rem;
+  }
+  
+  
+  .card-style img{
+      
+      border-radius: 15px 15px 15px 15px;
+     
+      }
+  
+  .card button{
+  border-radius: 30px;
+  }
+  .flex-card{
+      display: flex;
+     
+      padding: 1rem 5rem;
+  }
+
+.encuesta{
+  margin: 2rem 0rem;
+}
+
+.pregunta {
+  display: none;
+}
+

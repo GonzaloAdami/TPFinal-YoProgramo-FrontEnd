@@ -1,0 +1,30 @@
+<h3>Biografria</h3>
+<div class="conteiner">
+    <div id="biografia" style="padding-bottom: 15px;"></div>
+    <button type="button" class="btn-style" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Añadir
+    </button>
+</div>
+<p class="bio-usuario">
+    <div id="nombreUsuario">
+    </div> 
+      
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                        Biografia
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>  
+                <div class="modal-body ">
+                    <textarea name="" id="bio" cols="60" rows="5" style="resize: none;"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-exit" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn-style" data-bs-dismiss="modal" onclick="actualizarBiografia()">Publicar</button>
+                </div>
+            </div>
+        </div>
+    </div>

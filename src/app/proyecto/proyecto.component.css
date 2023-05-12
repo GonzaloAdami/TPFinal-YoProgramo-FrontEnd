@@ -1,0 +1,156 @@
+.card-style{
+    width: 22rem;
+    
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
+    }
+    
+    .container-proyects{
+        display: flex;
+        
+        padding: 1rem 5rem;
+        
+    }
+    .card {
+        margin: 2rem;
+    }
+    
+    
+    .card-style img{
+        
+        border-radius: 15px 15px 15px 15px;
+       
+        }
+    
+    .card button{
+    border-radius: 30px;
+    }
+    .flex-card{
+        display: flex;
+       
+        padding: 1rem 5rem;
+    }
+    
+    @keyframes slideRight {
+        from {
+            opacity: 0;
+            transform: translateX(-50%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+    
+    @keyframes slideLeft {
+        from {
+            opacity: 0;
+            transform: translateX(50%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+    
+    .carousel-item {
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+    }
+    
+    .carousel-item.active {
+        animation-name: slideRight;
+    }
+    
+    .carousel-item.next {
+        animation-name: slideLeft;
+    }
+    
+    .carousel-item.prev {
+        animation-name: slideRight;
+    }
+    
+    .background-modal-card{
+        background-color: #84b7db;
+        border-radius: 20px 20px;
+        box-shadow: 0.5px 0.5px 10px;
+        padding: 20px;
+       
+    }
+    
+    
+    
+    #moda-card:hover {
+        opacity: 0.3;
+       
+        /* agrega otros estilos de tu elección */
+      }
+      input[type="file"] {
+        display: none;
+      }
+      label {
+        cursor: pointer;
+      }
+
+      .btn-style{
+        border-radius: 20px;
+        border: 1px solid #1274bb;
+        background-color: #1274bb;
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 12px 45px;
+        box-shadow: 2px 12px 12px 2px rgba(0, 0, 0, 0.1);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: transform 80ms ease-in;
+                        
+    }
+
+    .modal-title{
+        color: #fff;
+        background-color: #1274bb;
+        border-radius: 35px 35px;
+        box-shadow: 0.5px 0.5px 10px rgba(0, 0, 0, .5);
+        padding: 10px 20px;
+       
+        
+       
+    }
+    .btn-style:hover{
+        background-color: #3592d5;
+        border-color: #3592d5;
+    }
+    
+    .btn-exit:hover{
+        background-color: rgb(194, 38, 38);
+        border-color: rgb(194, 38, 38);
+    }
+    .btn-exit{
+        background-color: brown; 
+        border-radius: 20px;
+        border: 1px solid brown;
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 12px 45px;
+        box-shadow: 2px 12px 12px 2px rgba(0, 0, 0, 0.1);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: transform 80ms ease-in;
+    }
+    
+    .link-proyect{
+        box-shadow: 0.5px 0.5px 5px;
+        border-radius: 20px;
+        padding: 6px;
+        background-color: rgb(10, 88, 184);
+    
+    }
+    
+    .link-text{
+       opacity: 0.86;
+        border-radius: 12px;
+    
+    }
+        

@@ -1,0 +1,42 @@
+
+    <div class="d-flex justify-content-center align-items-center" style="flex-direction: column; text-align: center;">
+        <h1>HTML5</h1>
+        <p>¡Completa el test y obtén un porcentaje!</p>
+    <div class="skill">
+        <div class="html">
+          <svg xmlns="http://www.w3.org/2000/svg" version ="1.1" width="160px" height="160px">
+            <defs>
+              <linearGradient id="html">
+                <stop offset="0%" stop-color="#e91e63" />
+                <stop offset="100%" stop-color="#673ab7" />
+              </linearGradient>
+            </defs>
+            <circle class="circle" cx="80" cy="80" r="70" stroke-linecap="round" />
+          </svg>
+          <div class="outer">
+            <div class="inner">
+              <div id="number">
+                {{porcentaje}}%
+              </div>
+            </div>
+            <h3 class="text-skill">
+                {{descripcion}}
+            </h3> 
+          </div>
+        </div>
+      </div>
+
+    <label for="skillButton" style="display:inline-block; text-align: center;"> 
+        <div style="margin-bottom: 1rem;">
+        <h4 style="color: black;">{{pregunta}}</h4>
+        <button style="background-color: rgb(24, 140, 26); border: none; border-radius: 35px 35px 35px 35px;  box-shadow: 0.4px 0.4px 8px 0.4px; padding-top: 0.8rem; opacity: 0.5; color: rgb(255, 255, 255);"><p><b>{{opciones}}</b></p></button>
+        </div>
+        
+        <form action="../js/skills.js" method="post" style="display: flex; gap: 30px; flex-direction: column; border: none; ">
+            <input type="button" name="afirmativo" class="btn-style" value="{{respuestaAfirmativa}}" id="RespuestaA" > 
+            <input type="button" name="negativo" class="btn-exit" value="{{respuestaNegativa}}" id="RespuestaB">
+        </form>
+    
+    </label>
+    </div>
+    <input type="text" value="{{afirmativo}}" id="resultados">

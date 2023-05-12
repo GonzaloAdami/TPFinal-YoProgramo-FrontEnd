@@ -1,0 +1,95 @@
+<h3 class="titulo justify-content-center d-flex">Proyectos</h3>
+<p class="texto justify-content-center d-flex">Añade tu Educacion.</p>
+<div id="proyectosCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#proyectosCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#proyectosCarousel" data-slide-to="1"></li>
+    <li data-target="#proyectosCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="d-flex justify-content-center">
+        <div class="card card-style " data-bs-toggle="modal" data-bs-target="#card-modal">
+          <img src="../../assets/img/proyect-new.png" class="card-img-top" alt="..." >
+          <div class="card-body">
+            <p class="card-text">¡Sube ya tu nuevo proyecyo!</p>
+            <button type="button" class="btn btn-primary">Ver el proyecto</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-flex justify-content-center">
+        <div class="card card-style" data-bs-toggle="modal" data-bs-target="#card-modal">
+          <img src="../../assets/img/proyect-new.png" id="edit-card-img" class="card-img-top" alt="..." >
+          <div class="card-body">
+            <p class="card-text">¡Sube ya tu nuevo proyecyo!</p>
+            <button type="button" class="btn btn-primary">Ver el proyecto</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#proyectosCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"><img src="../../assets/img/next-carousel-lf.png" alt="" style="height: 40px; width: 40px;"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#proyectosCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"><img src="../../assets/img/next-carousel-rg.png" alt="" style="height: 40px; width: 40px;"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
+</div>
+<div class="modal fade" id="link" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+  <div class="modal-dialog "  >
+    <div class="modal-content" style="border-radius: 20px; background-color: #ffffff;">
+      <div class="modal-header" style="background-image: url(../../assets/img/banner.png);  border-radius:  20px; height: 100px;" >
+        <h1 class="modal-title" id="staticBackdropLabel" style="font-size: 20px; padding: 0px 30px; background-color: rgb(58, 127, 191);">Link</h1>
+      </div>
+      <div class="modal-body" style="background-color: #ffffff; border-radius: 0px 0px 20px 20px;" >
+        <div class="link-proyect d-flex justify-content-center">
+          <textarea name="" id="bio" cols="55" rows="1" class="link-text" placeholder="Pega el link de tu proyecto..."></textarea> 
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-exit" data-bs-toggle="modal">Cerrar</button>
+        <button type="button" class="btn-style" data-bs-dismiss="modal" onclick="actualizarBiografia()">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<label for="cargarFoto" class="d-flex">
+</label>
+
+<div class="modal fade" id="card-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Tu proyecto
+        </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="background-modal-card d-flex ">
+          <div class="card card-style">
+            <div class="img-card-model" >
+              <label for="img">
+                <img src="../../assets/img/modal-icon-img.png" class="card-img-top" alt="edit" id="moda-card">
+                <form action="img" style="display: none;">
+                  <input type="file" id="img" name="img">
+                </form>
+              </label>
+            </div>
+            <div class="card-body">
+              <textarea name="" id="bio" cols="40" rows="1" style="border-radius: 8px;"></textarea>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#link">Ver el proyecto</button>
+            </div>                                     
+          </div>     
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-exit" data-bs-toggle="modal">Cerrar</button>
+        <button type="button" class="btn-style" data-bs-dismiss="modal" onclick="actualizarBiografia()">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
