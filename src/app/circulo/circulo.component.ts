@@ -9,6 +9,7 @@ import { Component, Input} from '@angular/core';
 export class CirculoComponent {
   porcentaje: number = 0;
   @Input() descripcion: string = '';
+  @Input () nombre: string = '';
   constructor (){
     this.porcentaje = 0;
     this.descripcion = '';

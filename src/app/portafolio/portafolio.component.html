@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>YoProgramo</title>
+
+      <link rel="icon" type="image/x-icon" href="favicon.ico">
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+      <link rel="stylesheet" href="/assets/css/style.css">
+    
+</head>
+<body>
+
+ <section> <!--  Navbar  -->
+    <nav class="navbar navbar-expand-lg "><!--Navar-->
+        <div class="container-fluid">
+          <ul>
+            <a href="https://jkanime.net/"><app-social [color]="'#2169D0'" [color2]="'#37B4D3'" [name]="'Facebook'" [clase]="'fa fa-facebook'"></app-social></a>
+            <app-social [color]="'#DC67CF'" [color2]="'#A428BA'" [name]="'Instagram'" [clase]="'fa fa-instagram'"></app-social>  
+            <app-social [color]="'#131BCC'" [color2]="'#135CCC'" [name]="'LinkedIn'" [clase]="'fa fa-linkedin'"></app-social>  
+            <app-social [color]="'#31314D'" [color2]="'#323234'" [name]="'Github'" [clase]="'fa fa-facebook'"></app-social>   
+            <app-social [color]="'#67B5DC'" [color2]="'#85CEF3'" [name]="'Twitter'" [clase]="'fa fa-twitter'"></app-social>     
+            
+          </ul>
+        </div>
+    </nav>
+</section>
+<section class="perfil-usuario">    <!--Portada-->  
+  <app-portada></app-portada>
+</section>                
+<section>         <!--Biografia-->
+  <div class="box">
+  <app-biografia></app-biografia>
+
+  </div>
+</section>
+<section>          <!--Experiencia-->
+  <div class="box">
+    <app-experiencia></app-experiencia>
+  </div>
+</section>
+<section >          <!--Educacion-->
+  <div class="box">    
+    <app-educacion></app-educacion>
+    
+  </div>
+</section>                    
+<section >          <!-- Proyectos -->
+  <div class="box">
+   <app-proyecto></app-proyecto>
+   
+  </div>                                               
+</section>
+<section>          <!--Skills-->
+  <div class="box-skills">
+    <h1 class="d-flex justify-content-center">Skills</h1>
+    <div style="display: flex; justify-content: center;">
+      <div class="contenedor-skills d-flex" style="display: flex; flex-direction: column;">
+        <div style="display: flex;">
+          <app-circulo descripcion="HTML5"></app-circulo>
+          <app-circulo descripcion="CSS3"></app-circulo>
+          <app-circulo descripcion="JavaScript"></app-circulo>
+          <app-circulo descripcion="Java"></app-circulo>
+          
+        </div>                                   
+        <div class="contenedor-skills d-flex">    
+          <app-circulo descripcion="Ingles"></app-circulo>
+          <app-circulo descripcion="Scrum"></app-circulo>
+          <app-circulo descripcion="DeVOps"></app-circulo>
+          <app-circulo descripcion="Git"></app-circulo>                
+        </div>
+        <div class="d-flex justify-content-center container-skill-button">
+          <button type="button" class="btn-style" data-bs-toggle="modal" data-bs-target="#skill-modal" style="margin-top: 2rem;">
+            Agregar mis skills
+          </button>
+        </div>
+      </div>  
+    </div>  
+  </div>  
+
+<div class="modal fade" id="skill-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content" style="display: flex; align-self: center;">
+    <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Skills
+        </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="../../datos.usuario.json" method="POST" id="encuesta">
+      <div class="modal-body">
+        <div class="background-modal-card d-flex ">                 
+          <div id="skillsCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card card-style" style="background-color: #f0f0f0;">
+             
+                  
+                    <div id="encuesta" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <div class="encuesta">
+                            <div class="container">
+  
+                              
+                            <app-encuesta (porcentajeValue)="porcentaje = $event"></app-encuesta>
+                            <button (click)="saberValorEncuesta(porcentaje)">Saber porcentaje</button>
+                            <button (click)="saberValorCirculo(porcentaje)">Saber valor circulo</button>
+                          </div>
+                        </div>
+                      </div>
+ 
+                      <div class="carousel-item">                                                                                           
+                          <p>hola</p> 
+                      </div>
+                      <div class="carousel-item">  
+                            
+                      </div>
+                      <div class="carousel-item">  
+                          
+                      </div>
+                      <div class="carousel-item">  
+                                                                      
+                      </div>
+                      <div class="carousel-item">  
+                        
+                      </div>
+              <div class="carousel-item"> 
+              <a class="carousel-control-prev" href="#skillsCarousel" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"><img src="../../assets/img/next-lf.png" alt="" style="height: 40px; width: 40px;"></span>
+                  <span class="sr-only">Anterior</span>
+              </a>
+              <a class="carousel-control-next" href="#skillsCarousel" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"><img src="../../assets/img/next-pv.png" alt="" style="height: 40px; width: 40px;"></span>
+                  <span class="sr-only">Siguiente</span>
+                </a>
+              </div>
+            </div> 
+          </div>
+         
+        
+        </div>   
+         
+      </div> 
+    
+    </div>  
+      
+  </div>   
+</div>  
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn-exit" data-bs-toggle="modal">Cerrar</button>
+  <button type="button" class="btn-style" data-bs-dismiss="modal" onclick="skillPulic()" id="skillButton">Publicar</button>
+</div> 
+</form>
+</div>  
+</div>  
+</div>  
+
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+<script src="./funciones.proyecto.ts/funcion.skills.encuesta.ts"></script>
+</body>
+</html>
