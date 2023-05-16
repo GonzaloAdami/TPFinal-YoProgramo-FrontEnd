@@ -11,7 +11,7 @@ export class PortafolioComponent implements OnInit {
   datos$!: Observable<any>;
   porcentaje: number = 0;
   circuloHTML: number = 0;
-usuarios: any = [];
+  /*usuarios: any = [];*/
   constructor(private http: HttpClient) {}
 
   
@@ -22,9 +22,9 @@ usuarios: any = [];
         const datosJson = JSON.stringify(response);
         console.log(datosJson);
         
-        this.usuarios = JSON.parse(datosJson); // Parsea los datos JSON a un objeto JavaScript
+        /*this.usuarios = JSON.parse(datosJson); // Parsea los datos JSON a un objeto JavaScript
         console.log(this.usuarios);
-        this.mostrarNombresUsuarios();
+        this.mostrarNombresUsuarios();*/
       },
       (error: any) => {
         console.error('Error al obtener los datos:', error);
@@ -32,7 +32,7 @@ usuarios: any = [];
     );
   }
   
-  mostrarNombresUsuarios(): void {
+  /*mostrarNombresUsuarios(): void {
     const div = document.getElementById('nombre-usuario');
     if (div) {
       this.usuarios.forEach((usuario: any) => {
@@ -41,7 +41,7 @@ usuarios: any = [];
     } else {
       console.error('Elemento div no encontrado en el DOM.');
     }
-  }
+  }*/
   
 
 
