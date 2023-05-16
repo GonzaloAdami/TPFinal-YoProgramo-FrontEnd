@@ -1,38 +1,38 @@
 <div class="perfil-usuario">
-    <div class="contenedor-perfil">
-        <div class="portada-perfil"><img src="../../assets/img/banner.png" id="banner" style=" border-radius: 20px 20px 20px 20px;">
-            <div class="opcciones-perfil">
-                <label for="loadbanner">
-                    <ul>
-                        <li style="--i:#53b9d0;--j:#1171c0;">
-                            <div id="icono" onmouseover="desaparecer()"><img src="../assets/img/añadir-imagen.png" style="width: 30px; height: 30px;"></div>
-                            <span class="titulo">Cambiar
-                            </span>
-                            <input type="file" id="loadbanner" onchange="portada()" class="photo-update">
-                        </li>
-                    </ul>
-                </label>
-            </div>
-            <div class="sombra"></div>
-            <div class="avatar-perfil"><img src="../assets/img/perfil.gif" id="foto" style=" border-radius: 20px 20px 20px 20px;">
-                <a href="#" class="cambiar-foto">
-                    <div style="padding-right: 15%; padding-bottom: 10%;">
-                        <label for="cargarFoto">
-                            <ul>
-                                <li style="--i:#53b9d0;--j:#1171c0;">
-                                    <div id="icono" onmouseover="desaparecer()"><img src="../assets/img/añadir-imagen.png" style="width: 30px; height: 30px;"></div>
-                                    <span class="titulo">Cambiar</span>
-                                    <input type="file" id="cargarFoto" onchange="cambiarFoto()" class="photo-update">
-                                </li>
-                            </ul>
-                        </label>
-                    </div>
-                </a>
-            </div>
-            <div class="datos-perfil">
-                <h4 class="titulo-usuario" style="padding-bottom:  1rem; padding-left: 0%;">
-                </h4>
-            </div>
-        </div>
+  <div class="contenedor-perfil">
+    <div class="portada-perfil">
+      <img [src]="banner" id="banner" class="banner">
+      <div class="opcciones-perfil">
+        <label for="loadbanner">
+          <ul>
+            <li style="--i:#53b9d0;--j:#1171c0;">
+              <div id="icono" onmouseover="desaparecer()"><img src="../assets/img/añadir-imagen.png" style="width: 30px; height: 30px;"></div>
+              <span class="titulo">Cambiar</span>
+              <input type="file" id="loadbanner" (change)="updateBanner($event)" class="photo-update">
+            </li>
+          </ul>
+        </label>
+      </div>
+      <div class="sombra"></div>
+      <div class="avatar-perfil">
+        <img [src]="profile" id="foto" style="border-radius: 20px 20px 20px 20px;">
+        <a href="#" class="cambiar-foto">
+          <div style="padding-right: 15%; padding-bottom: 10%;">
+            <label for="cargarFoto">
+              <ul>
+                <li style="--i:#53b9d0;--j:#1171c0;">
+                  <div id="icono" onmouseover="desaparecer()"><img src="../assets/img/añadir-imagen.png" style="width: 30px; height: 30px;"></div>
+                  <span class="titulo">Cambiar</span>
+                  <input type="file" id="cargarFoto" (change)="updateProfile($event)" class="photo-update">
+                </li>
+              </ul>
+            </label>
+          </div>
+        </a>
+      </div>
+      <div class="datos-perfil">
+        <h4 class="titulo-usuario" style="padding-bottom:  1rem; padding-left: 0%;"></h4>
+      </div>
     </div>
-</div>               
+  </div>
+</div>

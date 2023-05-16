@@ -1,22 +1,15 @@
-const resultados = document.getElementById('resultados');
-procetajeSkillHtml = resultados.value;
-function skillPulic(procetajeSkillHtml) {
-  const Array = [procetajeSkillHtml];
-  const fs = require('fs');
-
-
-
-// Convertir el array en una cadena JSON
-const jsonString = JSON.stringify(array);
-
-// Guardar la cadena JSON en un archivo
-fs.writeFile('datos.usuario.json', jsonString, (err) => {
-  if (err) {
-    console.error('Error al guardar el archivo JSON:', err);
-  } else {
-    console.log('Archivo JSON guardado correctamente.');
+{
+  "persona": {
+    "id": "1",
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "biografia": "Hola",
+    "experiencia": "Experiencia",
+    "proyectos": {
+      "proyecto": "Proyecto",
+      "descripcion": "Descripcion",
+      "imagen": "Imagen",
+      "link": "url"
+    }
   }
-});
-
- 
 }

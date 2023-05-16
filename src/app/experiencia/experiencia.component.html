@@ -1,63 +1,76 @@
 <h3 class="titulo justify-content-center d-flex">Experiencias</h3>
+
+<div style="display: flex; flex-direction: row;">
+
+  <div class="background-lg-experiencia">
+
 <div class="experience-container">
-    <ul>
-        <button class="btn-e btn btn-outline-primary new-experience" data-bs-toggle="modal" data-bs-target="#experiencia-modal">
-            <p class="text-experiencia">Añadir experiencia<img src="../../assets/img/new.png" alt="new" class="logo-experiencias"></p>
-        </button>
-    </ul>
+  <div class="imgLogo">
+    <img src="../../assets/img/perfil.gif" alt="">
+  </div>
+  
+    <button class="btn-user just justify-content-center" data-bs-toggle="modal" data-bs-target="#experiencia-modal">
+      <p class="text-experiencia">Añadir experiencia<img src="../../assets/img/new.png" alt="new" class="logo-experiencias"></p>
+    </button>
+  
 </div>
+
 <div class="modal fade" id="experiencia-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog ">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Tu experiencia
-                </h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Tu experiencia</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="contenedor">
+          <div class="box">
+            <label for=""><b style="color: rgb(25, 95, 113);">Escribe tu experiencia</b></label>
+            <textarea [(ngModel)]="texto" class="form-control" cols="55" rows="2" style="border-radius: 8px;"></textarea>
+         
+          <div class="box-skill">
+            <div style="padding-bottom: 10px;">
+              <h1 class="modal-title fs-5" style="width: 150px; height: 45px; margin-top: 2rem; margin-bottom: 1rem;" id="staticBackdropLabel">Vista previa</h1>
             </div>
-            <div class="modal-body">
-                <div class="contenedor">
-                    <div class="box-skill">                  
-                        <label for=""><b> Texto de la etiqueta</b></label>
-                        <textarea name="" id="bio" cols="55" rows="2" style="border-radius: 8px;"></textarea>                            
-                        
-                    </div>
-                    <div class="box-skill"> 
-                        <div style="padding-bottom: 10px;">
-                            <h1 class="modal-title fs-5" style="width: 150px; height: 45px;" id="staticBackdropLabel">Vista previa
-                            </h1>
-                        </div>
-                        <div class="background-modal-experience d-flex">
-                            <div >
-                                <ul>
-                                    <li style="--i:#53b9d0;--j:#1171c0;">
-                                        <div id="icono" onmouseover="desaparecer()"><img src="../../assets/img/añadir-imagen.png" class="img-modal" style="height: 35px; width: 35px;"></div>
-                                        <span class="titulo">Añadir foto</span>
-                                        <input type="file" id="cargarFoto" onchange="cambiarFoto()" class="photo-update">
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <button class="btn-e btn btn-outline-primary new-experience d-flex" data-bs-toggle="modal" data-bs-target="#experiencia-modal">
-                                    <p class="text-experiencia">Añadir experiencia<img src="../assets/img/new.png" alt="new" class="logo-experiencias"></p>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn-exit" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn-style" data-bs-dismiss="modal" onclick="actualizarBiografia()">Publicar</button>
-                    </div>
-                </div>
+            <div class="background-modal-experience d-flex" >
+              <div class="imgLogo">
+                <img src="../../assets/img/perfil.gif" alt="">
+              </div>
+             <button type="button" class="btn-user  d-flex">
+                <p class="text-experiencia">{{ texto }}</p>
+              </button>
             </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-exit" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn-style" data-bs-dismiss="modal">Publicar</button>
+      </div>
     </div>
+  </div>
 </div>
+</div>
+  
+    <div class="background-rg-experiencia">
+      <div style="text-align: right; padding-right: 1rem; padding-top: 1rem; margin-top: 10rem; margin-left: 1rem;">
+        
+        <button class="btn-e btn btn-outline-primary new-experience" style="border-radius: 10px 0px 10px 10px;">
+            <p class="text-experiencia">{{comentario}}</p>
+        </button>
+      
+      </div> 
+    
+    </div>
+    
 
 
 
-                                
-                    
-              
-           
-     
-   
+  
+</div>
+<div class="background-chat-experiencia">
+  <div style="text-align: right; padding-bottom: 2rem;">
+  <textarea name="text" id="" cols="35" rows="1" style="border-radius: 10px 10px 10px 10px;"></textarea>
+</div> 
+</div>

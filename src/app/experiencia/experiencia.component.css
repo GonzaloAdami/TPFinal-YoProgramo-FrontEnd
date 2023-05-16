@@ -2,9 +2,8 @@
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    padding: 5px;
+    padding:4px;
     opacity: 0.8;
-
 }
 .experiencia-fondo{
     background-color: aliceblue;
@@ -12,29 +11,40 @@
     text-decoration: none;
     box-shadow: 2px;
     text-align: center;
-    margin: 10px;
    
-
+}
+.text-experiencia{
+display: flex;
+justify-content: center;
+align-items: center;
+padding-bottom: 0.5rem;
 }
 
-.text-experiencia{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+.btn-user{
+  background-color: #1274bb;
+  color: #ffffff;
+  border: none;
+  right: 0;
+  max-width: 50rem;  
+  height: 2.8rem;
+  border-radius: 20px 20px 20px 0px;
+  
+}
+.btn-user:hover{
+  background-color: #589ccd;
 }
 .btn-e {
-    display: flex;
-    width: 100%;
-    height: 45px;
-    position: relative;
-    border-radius: 40px 40px 40px 40px;
-    background-color: rgb(50, 70, 219);
-    color: aliceblue;
-    border-color: none;
-    opacity: 0.8;
+  display: flex;
+  background-color: #1274bb;
+  color: #ffffff;
+  max-width: 50rem;
+ 
+  } 
+  .btn-e:hover{
+    height: auto;
+    max-height: none;
   }
+  
 .experience-container{
     display: flex;
 }
@@ -43,45 +53,26 @@
     border-radius: 20px 20px;
     box-shadow: 0.5px 0.5px 10px;
     padding: 20px;
-   
 }
 .photo-update{
     display: none;
 }
-.box-skill{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 2%;
-    background-color: #fff;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    margin-bottom: 0.75rem;
-    padding: 25px;
-    
-    
-  }
   .contenedor{
     display: flex;
     justify-content: center;
   flex-direction: column;
   }
-
   .modal-title{
-    color: #fff;
+    color: #e1f0f1;
     background-color: #1274bb;
     border-radius: 35px 35px;
-    box-shadow: 0.5px 0.5px 10px rgba(0, 0, 0, .5);
-    padding: 10px 20px;
-   
-    
-   
+    box-shadow: 0.5px 0.5px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;  
 }
 .btn-style:hover{
     background-color: #3592d5;
     border-color: #3592d5;
 }
-
 .btn-exit:hover{
     background-color: rgb(194, 38, 38);
     border-color: rgb(194, 38, 38);
@@ -110,6 +101,49 @@
   box-shadow: 2px 12px 12px 2px rgba(0, 0, 0, 0.1);
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition: transform 80ms ease-in;
-                  
+  transition: transform 80ms ease-in;                  
+}
+.imgLogo img{
+  border-radius: 20px 20px 20px 20px;
+  width: 5vw;
+  height: 5vw;
+  margin: 1rem 0rem;
+}
+.background-chat-experiencia{
+  background-color: rgb(63, 63, 63); 
+  padding-bottom: 1rem;
+  padding-right: 1rem; 
+  padding-top: 0.5rem;
+  height: 3rem;
+  width: 100%; 
+  border-radius: 0px 0px 20px 20px;
+  justify-content: center;
+  box-shadow: 1px 5px 15px 0px;
+}
+.background-lg-experiencia{
+  background-color: rgb(211, 228, 235); 
+  border-radius: 20px 0px 0px 0px; 
+  padding: 2rem; 
+  width: 75%;
+}
+.background-rg-experiencia{
+background-color: rgb(52, 53, 53); 
+border-radius: 0px 20px 0px 0px;
+height: 20rem;
+width: 20rem; 
+box-shadow: 1px 5px 15px ;
+}
+.box{
+  border-radius: 20px 20px 20px 20px;
+  color: #FFFFFF;
+  background-color: #d6e0e8;
+  padding: 1rem;
+  margin: 1rem 0rem;
+  box-shadow: 0.5px 0.5px 15px rgba(0, 0, 0, 0.5);
+}
+
+textarea {
+  border-radius: 20px 20px 20px 20px;
+  border-color: #aab8c3;
+background-color: #c0cdd7;
 }

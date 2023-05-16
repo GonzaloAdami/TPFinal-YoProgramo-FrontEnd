@@ -33,11 +33,13 @@
 <section class="perfil-usuario">    <!--Portada-->  
   <app-portada></app-portada>
 </section>                
-<section>         <!--Biografia-->
+<section class="mt">         <!--Biografia-->
   <div class="box">
   <app-biografia></app-biografia>
-
+    
   </div>
+
+
 </section>
 <section>          <!--Experiencia-->
   <div class="box">
@@ -57,7 +59,7 @@
   </div>                                               
 </section>
 <section>          <!--Skills-->
-  <div class="box-skills">
+  <div class="box">
     <h1 class="d-flex justify-content-center">Skills</h1>
     <div style="display: flex; justify-content: center;">
       <div class="contenedor-skills d-flex" style="display: flex; flex-direction: column;">
@@ -154,7 +156,7 @@
 </div>
 <div class="modal-footer">
   <button type="button" class="btn-exit" data-bs-toggle="modal">Cerrar</button>
-  <button type="button" class="btn-style" data-bs-dismiss="modal" onclick="skillPulic()" id="skillButton">Publicar</button>
+  <button type="button" class="btn-style" data-bs-dismiss="modal" onclick="skillPulic();" id="skillButton">Publicar</button>
 </div> 
 </form>
 </div>  
