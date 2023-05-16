@@ -46,7 +46,7 @@ usuarios: any = [];
 
 
   obtenerDatos(): Observable<any> {
-    return this.http.get<any>('http://localhost:8080/usuario');
+    return this.http.get<any>('https://backend-0vro.onrender.com');
   }
 
   saberValorEncuesta(porcentaje: number) {

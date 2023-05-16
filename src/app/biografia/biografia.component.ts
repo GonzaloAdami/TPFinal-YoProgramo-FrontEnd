@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./biografia.component.css']
 })
 export class BiografiaComponent implements OnInit {
-  private apiUrl = 'http://localhost:8080/';
+  private apiUrl = 'https://backend-0vro.onrender.com';
   @Input() biografia: string = "";
 
   constructor(private http: HttpClient) {}
