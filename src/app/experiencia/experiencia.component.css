@@ -6,7 +6,7 @@
     opacity: 0.8;
 }
 .experiencia-fondo{
-    background-color: aliceblue;
+    background-color: rgb(255, 253, 240);
     border-radius: 60px;
     text-decoration: none;
     box-shadow: 2px;
@@ -26,8 +26,11 @@ padding-bottom: 0.5rem;
   border: none;
   right: 0;
   max-width: 50rem;  
-  height: 2.8rem;
+  height: 3rem;
   border-radius: 20px 20px 20px 0px;
+display: flex;
+text-align: center;
+
   
 }
 .btn-user:hover{
@@ -136,14 +139,24 @@ box-shadow: 1px 5px 15px ;
 .box{
   border-radius: 20px 20px 20px 20px;
   color: #FFFFFF;
-  background-color: #d6e0e8;
+  background-color: #e5e8ea;
   padding: 1rem;
   margin: 1rem 0rem;
   box-shadow: 0.5px 0.5px 15px rgba(0, 0, 0, 0.5);
 }
 
 textarea {
-  border-radius: 20px 20px 20px 20px;
-  border-color: #aab8c3;
-background-color: #c0cdd7;
+border-radius: 20px 20px 20px 20px;
+background-color: #ffffff;
+border-color: #1274bb;
+
+}
+
+.modal-body{
+  background-color: #bddcf7;
+}
+.etiqueta-experiencia-texto{
+  width: 15rem;
+    height: auto;
+    word-break: break-all;
 }

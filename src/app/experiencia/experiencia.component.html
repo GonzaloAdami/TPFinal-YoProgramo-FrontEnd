@@ -25,8 +25,8 @@
       <div class="modal-body">
         <div class="contenedor">
           <div class="box">
-            <label for=""><b style="color: rgb(25, 95, 113);">Escribe tu experiencia</b></label>
-            <textarea [(ngModel)]="texto" class="form-control" cols="55" rows="2" style="border-radius: 8px;"></textarea>
+            <label for=""><b style="color: rgb(44, 121, 202);">Escribe tu experiencia</b></label>
+            <textarea [(ngModel)]="texto" class="form-control" cols="55" rows="2" style="border-radius: 8px;" id="myTextarea" maxlength="40"></textarea>
          
           <div class="box-skill">
             <div style="padding-bottom: 10px;">
@@ -37,7 +37,7 @@
                 <img src="../../assets/img/perfil.gif" alt="">
               </div>
              <button type="button" class="btn-user  d-flex">
-                <p class="text-experiencia">{{ texto }}</p>
+                <p class="etiqueta-experiencia-texto" id="charCount">{{ texto }}</p>
               </button>
             </div>
             </div>
@@ -57,7 +57,7 @@
       <div style="text-align: right; padding-right: 1rem; padding-top: 1rem; margin-top: 10rem; margin-left: 1rem;">
         
         <button class="btn-e btn btn-outline-primary new-experience" style="border-radius: 10px 0px 10px 10px;">
-            <p class="text-experiencia">{{comentario}}</p>
+            <p class="etiqueta-experiencia-texto">{{comentario}}</p>
         </button>
       
       </div> 
@@ -71,6 +71,6 @@
 </div>
 <div class="background-chat-experiencia">
   <div style="text-align: right; padding-bottom: 2rem;">
-  <textarea name="text" id="" cols="35" rows="1" style="border-radius: 10px 10px 10px 10px;"></textarea>
+  <textarea name="text" cols="35" rows="1" style="border-radius: 10px 10px 10px 10px;" id="myTextarea" maxlength="100"></textarea>
 </div> 
 </div>

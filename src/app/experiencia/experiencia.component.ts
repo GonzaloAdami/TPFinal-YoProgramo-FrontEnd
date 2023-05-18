@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent {
-  texto: string = 'Aqui puedes añadir tus experiencias';
+  texto: string = '¡Añade tu experiencia!';
   profile: string = '../../assets/img/perfil.gif';
   nombre: string = 'Usuario';
   comentario: String ="¡Bienvenido a tu portafolio usuario disfruta de tu experiencia!";
@@ -20,5 +20,20 @@ export class ExperienciaComponent {
       this.profile = imageProfile;
     };
     reader.readAsDataURL(file);
+    const textarea = document.getElementById('myTextarea') as HTMLTextAreaElement;
+const charCount = document.getElementById('charCount');
+
+textarea.addEventListener('input', function() {
+  const maxLength = parseInt(textarea.getAttribute('maxlength')!);
+  const currentLength = textarea.value.length;
+  const remainingLength = maxLength - currentLength;
+
+  charCount!.textContent = `Caracteres restantes: ${remainingLength}`;
+
+  if (currentLength > maxLength) {
+    textarea.value = textarea.value.substring(0, maxLength); // Limitar el texto al máximo permitido
   }
+});
+  }
+  
 }

@@ -76,3 +76,9 @@ margin-left: 1rem;
   background-color: #3592d5;
   border-color: #3592d5;
 }
+
+.biografia-text{
+    width: 55rem;
+    height: auto;
+    word-break: break-all;
+}
