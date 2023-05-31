@@ -1,14 +1,32 @@
-ul {
-    position: relative;
+#redes {
+    background-color: rgba(255, 255, 255, 0.601);
+    margin-top: 100vw;
+    position: fixed;
     display: flex;
-    gap: 25px
+    flex-direction: column;
+    height: 100vw;
+    left: -10px;
+    z-index: 10;
 }
-
+#ulFunction {
+    margin: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw
+}
+#avatarButton{
+    position: relative;
+    bottom: 2vw;
+    right: 0.3vw;
+  }
 ul li {
+    margin-top: 3vw;
+    margin-right: 2vw;
     position: relative;
     list-style: none;
-    width: 60px;
-    height: 60px;
+    width: 3vw;
+    height: 3vw;
     border-radius: 60px;
     cursor: pointer;
     display: flex;
@@ -19,8 +37,9 @@ ul li {
 }
 
 ul li:hover {
-    width: 180px;
+    width:10vw;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+   
 }
 
 ul li::before {
@@ -58,14 +77,14 @@ ul li:hover::after {
 
 ul li i {
     color: #777;
-    font-size: 1.75em !important;
+    font-size: 1.7vw !important;
     transition: 0.5s;
     transition-delay: 0.25s;
 }
 
 ul li:hover i {
     transform: scale(0);
-    font-size: 1.75em;
+    font-size: 0.2vw;
     transition-delay: 0.25s;
 }
 
@@ -75,12 +94,13 @@ ul li span {
 
 ul li .titulo {
     color: #fff;
-    font-size: 1.1em !important;
+    font-size: 1vw !important;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     transform: scale(0);
     transition: 0.5s;
     transition-delay: 0s;
+    
 }
 
 ul li:hover .titulo {

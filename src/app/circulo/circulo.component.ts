@@ -7,13 +7,14 @@ import { Component, Input} from '@angular/core';
   styleUrls: ['./circulo.component.css']
 })
 export class CirculoComponent {
-  porcentaje: number = 0;
+  @Input() porcentaje: number = 0;
   @Input() descripcion: string = '';
   @Input () nombre: string = '';
+  @Input() portentajeValor: number = 0;
   constructor (){
     this.porcentaje = 0;
     this.descripcion = '';
   }
-  
+ 
 }
 

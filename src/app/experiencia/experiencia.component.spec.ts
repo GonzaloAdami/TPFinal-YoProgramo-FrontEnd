@@ -6,6 +6,8 @@ describe('ExperienciaComponent', () => {
   let component: ExperienciaComponent;
   let fixture: ComponentFixture<ExperienciaComponent>;
 
+
+ 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ ExperienciaComponent ]

@@ -1,14 +1,16 @@
 ul {
-    position: relative;
+    margin-top: 26vw;
+    position: fixed;
     display: flex;
-    gap: 25px
+    flex-direction: column;
+    gap: 2vw
 }
 
 ul li {
     position: relative;
     list-style: none;
-    width: 60px;
-    height: 60px;
+    width: 3vw;
+    height: 3vw;
     border-radius: 60px;
     cursor: pointer;
     display: flex;
@@ -19,8 +21,9 @@ ul li {
 }
 
 ul li:hover {
-    width: 180px;
+    width:10vw;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+   
 }
 
 ul li::before {
@@ -58,14 +61,14 @@ ul li:hover::after {
 
 ul li i {
     color: #777;
-    font-size: 1.75em !important;
+    font-size: 1.7vw !important;
     transition: 0.5s;
     transition-delay: 0.25s;
 }
 
 ul li:hover i {
     transform: scale(0);
-    font-size: 1.75em;
+    font-size: 0.2vw;
     transition-delay: 0.25s;
 }
 
@@ -75,46 +78,16 @@ ul li span {
 
 ul li .titulo {
     color: #fff;
-    font-size: 1.1em !important;
+    font-size: 1vw !important;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     transform: scale(0);
     transition: 0.5s;
     transition-delay: 0s;
+    
 }
 
 ul li:hover .titulo {
     transform: scale(1);
     transition-delay: 0.25s;
-}
-
-.spacing-navar-red-social {
-    margin-left: 45%;
-}
-
-.logo {
-    height: 40px;
-    width: 40px;
-    background-image: url("/img/argentina-programa-logo.png");
-}
-
-
-
-.banner img {
-    max-height: 315px;
-    max-width: 1000px;
-    position: center;
-    display: flex;
-
-}
-
-.icon-login{
-    height: 40px;
-    width: 40px;
-    background-image: url("/img/login.png");
-    
-}
-
-.cargar-foto{
- background-image: url(/src/assets/img/argentina-programa-logo.png);
 }

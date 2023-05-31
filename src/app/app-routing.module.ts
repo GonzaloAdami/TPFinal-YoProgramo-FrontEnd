@@ -6,8 +6,8 @@ import { PortafolioComponent } from './portafolio/portafolio.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'portafolio', component: PortafolioComponent },
+  { path: '#proyectosCarousel', redirectTo: 'portafolio', pathMatch: 'full' }, // Agrega esta línea
   { path: '', redirectTo: 'login', pathMatch: 'full' }
-
 ];
 
 @NgModule({

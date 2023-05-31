@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -9,12 +9,17 @@ import { Observable } from 'rxjs';
 })
 export class PortafolioComponent implements OnInit {
   datos$!: Observable<any>;
-  porcentaje: number = 0;
+ @Input() porcentaje: number = 0;
   circuloHTML: number = 0;
-  /*usuarios: any = [];*/
+  @Input() profile: string = "../../assets/img/perfil.gif";
+  parentValue: number = 0;
+  resultado: number = 0;
+ 
   constructor(private http: HttpClient) {}
 
-  
+  Data(e: number) {
+    this.resultado = e;
+  }
   ngOnInit(): void {
 
     this.obtenerDatos().subscribe(
@@ -56,5 +61,8 @@ export class PortafolioComponent implements OnInit {
   saberValorCirculo(porcentaje: number) {
     porcentaje = (porcentaje / 25) * 118;
     console.log(porcentaje);
+  }
+  onValueChange(newValue: number) {
+    this.parentValue = newValue;
   }
 }

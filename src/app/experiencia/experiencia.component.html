@@ -4,13 +4,17 @@
 
   <div class="background-lg-experiencia">
 
+<div id="experiencia">
+
+</div>
+
 <div class="experience-container">
   <div class="imgLogo">
-    <img src="../../assets/img/perfil.gif" alt="">
+    <img [src]="profile" alt="">
   </div>
   
-    <button class="btn-user just justify-content-center" data-bs-toggle="modal" data-bs-target="#experiencia-modal">
-      <p class="text-experiencia">Añadir experiencia<img src="../../assets/img/new.png" alt="new" class="logo-experiencias"></p>
+    <button class="btn-user just justify-content-center" data-bs-toggle="modal" data-bs-target="#experiencia-modal" id="editor">
+      <p class="text-experiencia">Añadir experiencia<img src="../../assets/img/newViolet.png" alt="new" class="logo-experiencias"></p>
     </button>
   
 </div>
@@ -26,17 +30,20 @@
         <div class="contenedor">
           <div class="box">
             <label for=""><b style="color: rgb(44, 121, 202);">Escribe tu experiencia</b></label>
-            <textarea [(ngModel)]="texto" class="form-control" cols="55" rows="2" style="border-radius: 8px;" id="myTextarea" maxlength="40"></textarea>
+            <textarea [(ngModel)]="texto" class="form-control" cols="70" rows="1" id="myTextarea" maxlength="40"></textarea>
          
           <div class="box-skill">
             <div style="padding-bottom: 10px;">
-              <h1 class="modal-title fs-5" style="width: 150px; height: 45px; margin-top: 2rem; margin-bottom: 1rem;" id="staticBackdropLabel">Vista previa</h1>
+              <h1 class="modal-title vistaPrevia" id="staticBackdropLabel">Vista previa</h1>
+            </div>
+            <div id="experiencia">
+
             </div>
             <div class="background-modal-experience d-flex" >
               <div class="imgLogo">
-                <img src="../../assets/img/perfil.gif" alt="">
+                <img [src]="profile" alt="" class="imgLogo">
               </div>
-             <button type="button" class="btn-user  d-flex">
+             <button type="button" class="btn-user">
                 <p class="etiqueta-experiencia-texto" id="charCount">{{ texto }}</p>
               </button>
             </div>
@@ -44,9 +51,15 @@
           </div>
         </div>
       </div>
+   
+
+
       <div class="modal-footer">
         <button type="button" class="btn-exit" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn-style" data-bs-dismiss="modal">Publicar</button>
+        <button type="button" class="btn-style" data-bs-dismiss="modal" (click)="addElement()">Publicar</button>
+        <div #contenedorExperiencia>
+
+        </div>
       </div>
     </div>
   </div>
@@ -54,9 +67,9 @@
 </div>
   
     <div class="background-rg-experiencia">
-      <div style="text-align: right; padding-right: 1rem; padding-top: 1rem; margin-top: 10rem; margin-left: 1rem;">
+      <div>
         
-        <button class="btn-e btn btn-outline-primary new-experience" style="border-radius: 10px 0px 10px 10px;">
+        <button class="btn-e new-experience" style="border-radius: 10px 0px 10px 10px;" id="elementExperience">
             <p class="etiqueta-experiencia-texto">{{comentario}}</p>
         </button>
       
@@ -74,3 +87,4 @@
   <textarea name="text" cols="35" rows="1" style="border-radius: 10px 10px 10px 10px;" id="myTextarea" maxlength="100"></textarea>
 </div> 
 </div>
+<script src="../../assets/js/documentCreateElement.js"></script>

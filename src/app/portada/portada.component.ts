@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -9,10 +9,14 @@ import { Observable } from 'rxjs';
   styleUrls: ['./portada.component.css']
 })
 export class PortadaComponent {
-  banner: string = '../../assets/img/banner.png';
-  profile: string = '../../assets/img/perfil.gif';
+@Output() banner: string = '../../assets/img/banner.png';
+@Output() profile: string = '../../assets/img/perfil.gif';
+nombre: String = 'Usuario';
 
-  
+
+// Ejemplo de cómo emitir los datos al componente padre
+
+
 
   updateBanner(event: any) {
     const file = event.target.files[0];
@@ -24,6 +28,8 @@ export class PortadaComponent {
       this.banner = imageBanner;	
     };
     reader.readAsDataURL(file);
+
+    
   }
 
   updateProfile(event: any) {
@@ -36,5 +42,17 @@ export class PortadaComponent {
       this.profile = imageProfile;	
     };
     reader.readAsDataURL(file);
+   
+    
+      
+      
+    }
   }
+
+function SetProfile() {
+  throw new Error('Function not implemented.');
 }
+
+
+     
+   

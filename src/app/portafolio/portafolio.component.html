@@ -19,8 +19,8 @@
  <section> <!--  Navbar  -->
     <nav class="navbar navbar-expand-lg "><!--Navar-->
         <div class="container-fluid">
-          <ul>
-            <a href="https://jkanime.net/"><app-social [color]="'#2169D0'" [color2]="'#37B4D3'" [name]="'Facebook'" [clase]="'fa fa-facebook'"></app-social></a>
+          <ul id="redes">
+            <app-social [color]="'#2169D0'" [color2]="'#37B4D3'" [name]="'Facebook'" [clase]="'fa fa-facebook'"></app-social>
             <app-social [color]="'#DC67CF'" [color2]="'#A428BA'" [name]="'Instagram'" [clase]="'fa fa-instagram'"></app-social>  
             <app-social [color]="'#131BCC'" [color2]="'#135CCC'" [name]="'LinkedIn'" [clase]="'fa fa-linkedin'"></app-social>  
             <app-social [color]="'#31314D'" [color2]="'#323234'" [name]="'Github'" [clase]="'fa fa-facebook'"></app-social>   
@@ -31,7 +31,7 @@
     </nav>
 </section>
 <section class="perfil-usuario">    <!--Portada-->  
-  <app-portada></app-portada>
+  <app-portada ></app-portada>
 </section>                
 <section class="mt">         <!--Biografia-->
   <div class="box">
@@ -59,25 +59,25 @@
   </div>                                               
 </section>
 <section>          <!--Skills-->
-  <div class="box">
+  <div class="box" style="padding-bottom: 6vw;">
     <h1 class="d-flex justify-content-center">Skills</h1>
     <div style="display: flex; justify-content: center;">
-      <div class="contenedor-skills d-flex" style="display: flex; flex-direction: column;">
-        <div style="display: flex;">
-          <app-circulo descripcion="HTML5"></app-circulo>
+      <div class="contenedor-skills">
+        <div style="display: block;">
+          <app-circulo descripcion="HTML5" [porcentaje]="resultado"></app-circulo>
           <app-circulo descripcion="CSS3"></app-circulo>
           <app-circulo descripcion="JavaScript"></app-circulo>
           <app-circulo descripcion="Java"></app-circulo>
           
         </div>                                   
-        <div class="contenedor-skills d-flex">    
-          <app-circulo descripcion="Ingles"></app-circulo>
+        <div class="contenedor-skills">    
+          <app-circulo descripcion="Ingles" ></app-circulo>
           <app-circulo descripcion="Scrum"></app-circulo>
           <app-circulo descripcion="DeVOps"></app-circulo>
           <app-circulo descripcion="Git"></app-circulo>                
         </div>
-        <div class="d-flex justify-content-center container-skill-button">
-          <button type="button" class="btn-style" data-bs-toggle="modal" data-bs-target="#skill-modal" style="margin-top: 2rem;">
+        <div >
+          <button type="button" class="btn-style" data-bs-toggle="modal" data-bs-target="#skill-modal" id="addSkill">
             Agregar mis skills
           </button>
         </div>
@@ -99,7 +99,7 @@
           <div id="skillsCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <div class="card card-style" style="background-color: #f0f0f0;">
+                <div class="card card-style">
              
                   
                     <div id="encuesta" class="carousel slide" data-ride="carousel">
@@ -109,9 +109,8 @@
                             <div class="container">
   
                               
-                            <app-encuesta (porcentajeValue)="porcentaje = $event"></app-encuesta>
-                            <button (click)="saberValorEncuesta(porcentaje)">Saber porcentaje</button>
-                            <button (click)="saberValorCirculo(porcentaje)">Saber valor circulo</button>
+                            <app-encuesta (valueChange)="Data($event)"></app-encuesta>
+                           
                           </div>
                         </div>
                       </div>

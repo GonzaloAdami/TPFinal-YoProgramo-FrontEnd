@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 * {
   box-sizing: border-box;
+  
 }
 body {
-  background-color: #0a3c7d;
+  background-image: url(../../assets/img/background-login.jpg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +12,9 @@ body {
   font-family: "Montserrat", sans-serif;
   height: 100vh;
   margin: -20px 0 50px;
+  background-size: cover;
 }
+
 h1 {
   font-weight: bold;
   margin: 0;
@@ -80,9 +83,12 @@ input {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   position: relative;
   overflow: hidden;
-  width: 768px;
+  width: 50rem;
   max-width: 100%;
   min-height: 480px;
+  justify-content: center;
+  margin-top: 5rem;
+ 
 }
 .form-container {
   position: absolute;

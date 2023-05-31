@@ -18,6 +18,7 @@ import { EncuestaComponent } from './encuesta/encuesta.component';
 import { PortafolioComponent } from './portafolio/portafolio.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { ColorPickerModule } from 'ngx-color-picker';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { LoginComponent } from './login/login.component';
     EncuestaComponent,
     PortafolioComponent,
     LoginComponent
+    
    
   ],
   imports: [
@@ -41,7 +43,8 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ColorPickerModule
 
   ],
   providers: [],

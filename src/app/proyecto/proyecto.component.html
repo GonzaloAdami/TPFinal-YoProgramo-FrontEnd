@@ -1,44 +1,56 @@
 <h3 class="titulo justify-content-center d-flex">Proyectos</h3>
 <p class="texto justify-content-center d-flex">Añade tu Educacion.</p>
-<div id="proyectosCarousel" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#proyectosCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#proyectosCarousel" data-slide-to="1"></li>
-    <li data-target="#proyectosCarousel" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators" id="agregarLista">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner" id="agregarProyecto">
     <div class="carousel-item active">
       <div class="d-flex justify-content-center">
         <div class="card card-style " data-bs-toggle="modal" data-bs-target="#card-modal">
           <img src="../../assets/img/proyect-new.png" class="card-img-top" alt="Slide 1" >
           <div class="card-body">
-            <p class="card-text">¡Sube ya tu nuevo proyecyo!</p>
-            <button type="button" class="btn btn-primary">Ver el proyecto</button>
+            <p class="card-text">¡Sube ya tu nuevo proyecto!</p>
+            <button type="button" class="btn-style">Ver el proyecto</button>
           </div>
         </div>
       </div>
     </div>
     <div class="carousel-item">
       <div class="d-flex justify-content-center">
-        <div class="card card-style" data-bs-toggle="modal" data-bs-target="#card-modal">
-          <img src="../../assets/img/proyect-new.png" id="edit-card-img" class="card-img-top" alt="Slide 2" >
+        <div class="card card-style " data-bs-toggle="modal" data-bs-target="#card-modal">
+          <img src="../../assets/img/proyect-new.png" class="card-img-top" alt="Slide 1" >
           <div class="card-body">
-            <p class="card-text">¡Sube ya tu nuevo proyecyo!</p>
-            <button type="button" class="btn btn-primary">Ver el proyecto</button>
+            <p class="card-text">¡Sube ya tu nuevo proyecto!</p>
+            <button type="button" class="btn-style">Ver el proyecto</button>
           </div>
         </div>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#proyectosCarousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"><img src="../../assets/img/next-carousel-lf.png" alt="" style="height: 40px; width: 40px;"></span>
-      <span class="sr-only">Anterior</span>
-    </a>
-    <a class="carousel-control-next" href="#proyectosCarousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"><img src="../../assets/img/next-carousel-rg.png" alt="" style="height: 40px; width: 40px;"></span>
-      <span class="sr-only">Siguiente</span>
-    </a>
+    <div class="carousel-item">
+      <div class="d-flex justify-content-center">
+        <div class="card card-style " data-bs-toggle="modal" data-bs-target="#card-modal">
+          <img src="../../assets/img/proyect-new.png" class="card-img-top" alt="Slide 1" >
+          <div class="card-body">
+            <p class="card-text">¡Sube ya tu nuevo proyecto!</p>
+            <button type="button" class="btn-style">Ver el proyecto</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
+
 
 
 
@@ -55,7 +67,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn-exit" data-bs-toggle="modal">Cerrar</button>
-        <button type="button" class="btn-style" data-bs-dismiss="modal" onclick="actualizarBiografia()">Publicar</button>
+        <button type="button" class="btn-style" data-bs-dismiss="modal" onclick="crearProyecto()">Publicar</button>
       </div>
     </div>
   </div>
@@ -83,15 +95,15 @@
               </label>
             </div>
             <div class="card-body">
-              <textarea name="" id="bio" cols="40" rows="1" style="border-radius: 8px;"></textarea>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#link">Ver el proyecto</button>
+              <textarea name="" id="bio" cols="29" rows="1" style="border-radius: 8px;"></textarea>
+              <button type="button" class="btn-style" data-bs-toggle="modal" data-bs-target="#link">Ver el proyecto</button>
             </div>                                     
           </div>     
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn-exit" data-bs-toggle="modal">Cerrar</button>
-        <button type="button" class="btn-style" data-bs-dismiss="modal" onclick="actualizarBiografia()">Publicar</button>
+        <button type="button" class="btn-style" data-bs-dismiss="modal" (click)="crearProyecto()">Publicar</button>
       </div>
     </div>
   </div>

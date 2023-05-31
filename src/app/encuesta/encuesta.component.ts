@@ -16,7 +16,9 @@ export class EncuestaComponent implements OnInit {
   @Input() descripcion: string = '';
   @Input() opciones: string = '';
   afirmativo: number = 0;
-  @Input() value: number = 0;
+  @Output() value: number = 0;
+  @Output() valueChange: EventEmitter<number> = new EventEmitter<number>();
+
   @Input() title?: string; 
   @Output() porcentajeValue = new EventEmitter<number>();
 
@@ -60,7 +62,7 @@ export class EncuestaComponent implements OnInit {
     if (yesButton) {
       yesButton.addEventListener('click', () => {
         encuesta = encuesta + 1;
-        afirmativo = afirmativo + 25;
+        
         resultadoSkills = resultadoSkills + 118;  
     
         console.log(encuesta);
@@ -148,7 +150,8 @@ export class EncuestaComponent implements OnInit {
 }
 
 
-mostrar_en_consola(){
-this.porcentajeValue.emit(this.porcentaje);
+
+Data(){
+  this.valueChange.emit(this.value);
 }
-};
+}

@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class BiografiaService {
-  private apiUrl = 'https://backend-0vro.onrender.com'; // Reemplaza con la URL de tu API
+  private apiUrl = 'https://backend-0vro.onrender.comgit'; // Reemplaza con la URL de tu API
 
   constructor(private http: HttpClient) { }
 

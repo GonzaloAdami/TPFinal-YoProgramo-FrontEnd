@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { style } from '@angular/animations';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-experiencia',
@@ -7,17 +8,87 @@ import { Component } from '@angular/core';
 })
 export class ExperienciaComponent {
   texto: string = '¡Añade tu experiencia!';
-  profile: string = '../../assets/img/perfil.gif';
   nombre: string = 'Usuario';
+  @Input() profile: string = "../../assets/img/perfil.gif";
   comentario: String ="¡Bienvenido a tu portafolio usuario disfruta de tu experiencia!";
+  
+
+  NgOnInit(): void {
+
+  }
+ 
+  addElement() {
+  
+    // Crear el elemento <div> con una clase específica
+    let contenedorExperiencia = document.createElement('div');
+    contenedorExperiencia.style.display = "flex";
+    contenedorExperiencia.style.marginBottom = "1rem";
+    // Agregar la clase 'imgLogo' al <div>
+  
+    // Crear el elemento <img> y asignar la imagen de perfil
+ 
+   
+   
+    let etiquetaExperiencia = document.createElement('button');
+    etiquetaExperiencia.style.display = "flex";
+    etiquetaExperiencia.style.backgroundColor= "#1274bb";
+    etiquetaExperiencia.style.color = "#ffffff";
+    contenedorExperiencia.style.maxWidth = 'auto';
+    etiquetaExperiencia.textContent = "Funcion no disponible";
+    etiquetaExperiencia.style.borderRadius = "20px 20px 20px 0px";
+    etiquetaExperiencia.style.height = "3vw"; // Agregar texto al interior del botón
+    etiquetaExperiencia.style.border = "none";
+    etiquetaExperiencia.style.textAlign = "center";
+    etiquetaExperiencia.style.marginBottom = "2rem";
+    let fotoPerfil = document.createElement('img');
+    fotoPerfil.src = this.profile;
+    fotoPerfil.style.width = "5vw";
+    fotoPerfil.style.height = "5vw";
+    fotoPerfil.style.borderRadius = "50%";
+    fotoPerfil.style.display = "flex";
+    fotoPerfil.style.marginRight = "0.5vw";
+    
+    contenedorExperiencia.appendChild(fotoPerfil);
+    contenedorExperiencia.appendChild(etiquetaExperiencia);
+    // Asignar la ruta de la imagen de perfil a 'this.profile'
+    
+    // Agregar el elemento <img> al elemento <div>
+   
+  
+    // Agregar el elemento <div> al documento HTML
+    document.body.appendChild(contenedorExperiencia);
+  
+    // Verificar si existe un elemento con el id "experiencia" antes de agregarlo
+    let experiencia = document.getElementById("experiencia");
+    if (experiencia) {
+      experiencia.appendChild(contenedorExperiencia);
+    }else{
+      console.log("No existe");
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+     
+      
+      
+
   updateProfile(event: any) {
     const file = event.target.files[0];
     const reader = new FileReader();  
 
+
+    
     reader.onload = (e: any) => {
       const imageProfile = e.target.result;
       // Aquí puedes realizar las acciones necesarias con la imagen cargada,
       this.profile = imageProfile;
+      
+    
     };
     reader.readAsDataURL(file);
     const textarea = document.getElementById('myTextarea') as HTMLTextAreaElement;
@@ -36,4 +107,12 @@ textarea.addEventListener('input', function() {
 });
   }
   
+
+
+  
+  // Ejemplo de uso
+
+
+
 }
+
