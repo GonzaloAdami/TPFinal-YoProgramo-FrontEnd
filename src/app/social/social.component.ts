@@ -10,6 +10,10 @@ export class SocialComponent {
   @Input() color2: string;
   @Input() name: string = '';
   @Input() clase: string = ''; 
+  @Input() imagen: string = '';
+  @Input() alt: string = '';
+  @Input() display: string = '';
+  @Input() link: string = '';
 constructor() {
   this.color = '';
   this.color2 = '';
