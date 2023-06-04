@@ -1,4 +1,7 @@
 
+img{
+    object-fit: cover;
+}
 .perfil-usuario{
     height: 25vw;
 }
@@ -21,12 +24,13 @@
     border-radius: 2vw;
     position: relative;
     margin: 0 auto;
+
     
  
 }
 .perfil-usuario #banner img{
-    width: 100%;
-    max-width: 30%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
  
     
  

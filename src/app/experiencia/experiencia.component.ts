@@ -10,9 +10,11 @@ export class ExperienciaComponent {
   texto: string = '¡Añade tu experiencia!';
   nombre: string = 'Usuario';
   @Input() profile: string = "../../assets/img/perfil.gif";
-  comentario: String ="¡Bienvenido a tu portafolio usuario disfruta de tu experiencia!";
+  @Output() comentario: String ="¡Bienvenido a tu portafolio usuario disfruta de tu experiencia!";
   
+constructor(){
 
+}
   NgOnInit(): void {
 
   }
@@ -34,12 +36,13 @@ export class ExperienciaComponent {
     etiquetaExperiencia.style.backgroundColor= "#1274bb";
     etiquetaExperiencia.style.color = "#ffffff";
     contenedorExperiencia.style.maxWidth = 'auto';
-    etiquetaExperiencia.textContent = "Funcion no disponible";
+    etiquetaExperiencia.textContent = this.texto.toString();
     etiquetaExperiencia.style.borderRadius = "20px 20px 20px 0px";
     etiquetaExperiencia.style.height = "3vw"; // Agregar texto al interior del botón
     etiquetaExperiencia.style.border = "none";
     etiquetaExperiencia.style.textAlign = "center";
     etiquetaExperiencia.style.marginBottom = "2rem";
+    etiquetaExperiencia.style.padding = "0.5vw";
     let fotoPerfil = document.createElement('img');
     fotoPerfil.src = this.profile;
     fotoPerfil.style.width = "5vw";

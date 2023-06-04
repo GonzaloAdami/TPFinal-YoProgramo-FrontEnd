@@ -32,7 +32,7 @@
     </nav>
 </section>
 <section class="perfil-usuario">    <!--Portada-->  
-  <app-portada ></app-portada>
+  <app-portada></app-portada>
 </section>                
 <section class="mt">         <!--Biografia-->
   <div class="box">
@@ -85,85 +85,151 @@
       </div>  
     </div>  
   </div>  
-
-<div class="modal fade" id="skill-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content" style="display: flex; align-self: center;">
-    <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Skills
-        </h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <form action="../../datos.usuario.json" method="POST" id="encuesta">
-      <div class="modal-body">
-        <div class="background-modal-card d-flex ">                 
-          <div id="skillsCarousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="card card-style">
-             
-                  
-                    <div id="encuesta" class="carousel slide" data-ride="carousel">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <div class="encuesta">
-                            <div class="container">
-  
-                              
-                            <app-encuesta (valueChange)="Data($event)"></app-encuesta>
-                           
-                          </div>
-                        </div>
-                      </div>
- 
-                      <div class="carousel-item">                                                                                           
-                          <p>hola</p> 
-                      </div>
-                      <div class="carousel-item">  
-                            
-                      </div>
-                      <div class="carousel-item">  
-                          
-                      </div>
-                      <div class="carousel-item">  
-                                                                      
-                      </div>
-                      <div class="carousel-item">  
-                        
-                      </div>
-              <div class="carousel-item"> 
-              <a class="carousel-control-prev" href="#skillsCarousel" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"><img src="../../assets/img/next-lf.png" alt="" style="height: 40px; width: 40px;"></span>
-                  <span class="sr-only">Anterior</span>
-              </a>
-              <a class="carousel-control-next" href="#skillsCarousel" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"><img src="../../assets/img/next-pv.png" alt="" style="height: 40px; width: 40px;"></span>
-                  <span class="sr-only">Siguiente</span>
-                </a>
-              </div>
-            </div> 
-          </div>
-         
-        
-        </div>   
-         
-      </div> 
-    
-    </div>  
-      
-  </div>   
-</div>  
-</div>
-<div class="modal-footer">
-  <button type="button" class="btn-exit" data-bs-toggle="modal">Cerrar</button>
-  <button type="button" class="btn-style" data-bs-dismiss="modal" onclick="skillPulic();" id="skillButton">Publicar</button>
-</div> 
-</form>
-</div>  
-</div>  
-</div>  
-
 </section>
+
+
+  <!--Modal Skills-->
+  <div class="modal fade" id="skill-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content" style="display: flex; align-self: center;">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Skills</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="../../datos.usuario.json" method="POST" id="encuesta">
+          <!--Diseño-->
+          <div class="modal-body">
+            <div class="background-modal-card d-flex ">          
+              <div id="skillsCarousel" class="carousel slide" data-ride="carousel">
+                <!--Listado de elementos-->
+                <div class="carousel-indicators" id="listEncuesta">
+                  <button type="button" data-bs-target="#encuesta" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#encuesta" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#encuesta" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#encuesta" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#encuesta" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <!--carrousel header-->
+                <div class="carousel-inner">                
+                  <div class="carousel-item active">
+                    <div class="card card-style">
+                      <div id="encuesta" class="carousel slide" data-ride="carousel">
+                        <!--Contenido-->
+                        <div class="carousel-inner" data-bs-slide-to="0">  
+                          <app-encuesta (valueChange)="Data($event)" 
+                            [titulo]="'HTML5'"
+                            [subtitulo]="'Arquietectura web'"
+
+                            [pregunta1]="'¿Estás familiarizado con las etiquetas de encabezado y su importancia para la jerarquía de títulos en HTML?'" 
+                            [opciones1]="'h1 h2 h3 h4 h5 h6'"
+
+                            [pregunta2]="'¿Estás familiarizado con el uso de atributos class e id para seleccionar elementos específicos y aplicarles estilos o funcionalidades en HTML?'"
+                            [opciones2]="'Class ID'" 
+
+                            [pregunta3]="'¿Estás familiarizado con el concepto de elementos de formulario en HTML, y cómo se utilizan para recopilar datos del usuario?'"
+                            [opciones3]="'input | select | textarea'"  
+                            
+                            [pregunta4]="'¿Estás familiarizado con el uso de etiquetas semánticas en HTML, y cómo contribuyen a una estructura de página web más clara y significativa?'"
+                            [opciones4]="'header | main | section | footer | nav'">
+                          </app-encuesta>   
+                        </div>
+                        <div class="carousel-item" data-bs-slide-to="1">                                                                                           
+                          <app-encuesta (valueChange)="Data($event)" 
+                            [titulo]="'CSS3'"
+                            [subtitulo]="'Arquietectura web'"
+
+                            [pregunta1]="'Pregunta 1'" 
+                            [opciones1]="'Opcion 1'"
+
+                            [pregunta2]="'pregunta 2'"
+                            [opciones2]="'Opcion 2'" 
+
+                            [pregunta3]="'pregunta 3'"
+                            [opciones3]="'Opcion 3'"  
+                            
+                            [pregunta4]="'pregunta 4'"
+                            [opciones4]="'Opcion 4'">
+                          </app-encuesta>  
+                        </div>
+                        <div class="carousel-item" data-bs-slide-to="2">  
+                          <app-encuesta (valueChange)="Data($event)" 
+                            [titulo]="'HTML5'"
+                            [subtitulo]="'Arquietectura web'"
+
+                            [pregunta1]="'Pregunta 1'" 
+                            [opciones1]="'Opcion 1'"
+
+                            [pregunta2]="'pregunta 2'"
+                            [opciones2]="'Opcion 2'" 
+
+                            [pregunta3]="'pregunta 3'"
+                            [opciones3]="'Opcion 3'"  
+                            
+                            [pregunta4]="'pregunta 4'"
+                            [opciones4]="'Opcion 4'">
+                         </app-encuesta>  
+                      </div>
+                      <div class="carousel-item">  
+                          <app-encuesta (valueChange)="Data($event)" 
+                            [titulo]="'HTML5'"
+                            [subtitulo]="'Arquietectura web'"
+
+                            [pregunta1]="'Pregunta 1'" 
+                            [opciones1]="'Opcion 1'"
+
+                            [pregunta2]="'pregunta 2'"
+                            [opciones2]="'Opcion 2'" 
+
+                            [pregunta3]="'pregunta 3'"
+                            [opciones3]="'Opcion 3'"  
+                            
+                            [pregunta4]="'pregunta 4'"
+                            [opciones4]="'Opcion 4'">
+                          </app-encuesta>  
+                        </div>
+                        <div class="carousel-item">  
+                          <app-encuesta (valueChange)="Data($event)" 
+                            [titulo]="'HTML5'"
+                            [subtitulo]="'Arquietectura web'"
+
+                            [pregunta1]="'Pregunta 1'" 
+                            [opciones1]="'Opcion 1'"
+
+                            [pregunta2]="'pregunta 2'"
+                            [opciones2]="'Opcion 2'" 
+
+                            [pregunta3]="'pregunta 3'"
+                            [opciones3]="'Opcion 3'"  
+                            
+                            [pregunta4]="'pregunta 4'"
+                            [opciones4]="'Opcion 4'">
+                          </app-encuesta>  
+                        </div>
+                        <!--Boton carrousel-->
+                      </div>  
+                    </div>      
+                    <button class="carousel-control-prev" type="button" data-bs-target="#encuesta" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#encuesta" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>  
+                  </div>      
+                </div>    
+              </div>   
+            </div>   
+          </div>  
+          <div class="modal-footer">
+            <button type="button" class="btn-exit" data-bs-toggle="modal">Cerrar</button>
+            <button type="button" class="btn-style" data-bs-dismiss="modal" onclick="skillPulic();" id="skillButton">Publicar</button>
+          </div> 
+        </form>
+      </div>  
+    </div>  
+  </div>  
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 

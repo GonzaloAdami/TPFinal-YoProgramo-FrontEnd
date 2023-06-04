@@ -1,6 +1,11 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import  usuariodatos from '../../assets/json/datos.json';
+
+
+
+
 
 
 @Component({
@@ -11,14 +16,16 @@ import { Observable } from 'rxjs';
 export class PortadaComponent {
 @Output() banner: string = '../../assets/img/banner.png';
 @Output() profile: string = '../../assets/img/perfil.gif';
-nombre: String = 'Usuario';
-
+@Input() nombre: String = 'Usuario';
+usuario: any = usuariodatos;
 
 // Ejemplo de cómo emitir los datos al componente padre
 
+  constructor(private http: HttpClient) {
+    this.usuario = usuariodatos;
+  }
 
-
-  updateBanner(event: any) {
+  updateBanner(event: any): void {
     const file = event.target.files[0];
     const reader = new FileReader();
     
@@ -49,9 +56,11 @@ nombre: String = 'Usuario';
     }
   }
 
+
 function SetProfile() {
   throw new Error('Function not implemented.');
 }
+
 
 
      

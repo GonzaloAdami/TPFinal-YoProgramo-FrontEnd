@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core'; 
+import { Component, Inject, OnInit, Output, EventEmitter } from '@angular/core'; 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AutenticacionService } from '../servicios/autenticacion.service';
 import { Router } from '@angular/router';
@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   form!: FormGroup;
-
+  userName: string = "";
+  @Output() user: EventEmitter<string> = new EventEmitter<string>();
   constructor(private formBuilder: FormBuilder, private autenticacionService: AutenticacionService,  @Inject(Router) private ruta: Router) { }
    
   ngOnInit(): void {
@@ -23,6 +24,7 @@ export class LoginComponent implements OnInit {
         notificationToken: ['67657575eececc34']
       })
     });
+   
   }
 
   get Email() {
@@ -38,3 +40,4 @@ export class LoginComponent implements OnInit {
     this.ruta.navigate(['/portafolio']);
   }
 }
+

@@ -1,5 +1,6 @@
 import { style } from '@angular/animations';
-import { Component, ElementRef, EventEmitter, Input, Output, ViewChild, OnInit } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild, OnInit, ComponentFactoryResolver, ViewContainerRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-educacion',
@@ -24,10 +25,11 @@ export class EducacionComponent implements OnInit {
   
     let etiqueta = document.createElement('button');
     etiqueta.classList.add('btn-e');
-    etiqueta.textContent = 'Funcion no disponible';
+    etiqueta.textContent = this.texto.toString();
     etiqueta.style.display= 'flex';
     etiqueta.style.justifyContent = 'center';
-    etiqueta.style.height= '45px';
+    etiqueta.style.alignItems = 'center'; 
+    etiqueta.style.height= '3vw';
     etiqueta.style.position= 'relative';
     etiqueta.style.borderRadius= '40px 40px 40px 40px';
     etiqueta.style.backgroundColor= 'rgb(50, 70, 219)';
@@ -36,7 +38,7 @@ export class EducacionComponent implements OnInit {
     etiqueta.style.opacity= '0.8';
     etiqueta.style.padding= '1vw';
     etiqueta.style.margin= '1vw';
-    etiqueta.style.alignContent= 'center';
+    
 
     educacionContainer?.appendChild(etiqueta);
     if (educacionContainer !== null) {

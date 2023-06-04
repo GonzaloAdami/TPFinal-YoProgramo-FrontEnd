@@ -45,6 +45,7 @@
 }
 .pregunta {
   display: none;
+  
 }
 /*Skills*/
 .skill {
@@ -96,4 +97,17 @@ svg {
   100% {
     stroke-dashoffset: 120;
   }
+}
+.opciones{
+  background-color: rgb(88, 156, 125); 
+  border: none; 
+  border-radius: 1vw;  
+  box-shadow: 0.4px 0.4px 8px 0.4px;
+  padding-top: 1vw;
+  opacity: 0.8; 
+  color: rgb(255, 255, 255);
+}
+h4{
+  margin-top: 1vw;
+  font-size: 1.3vw;
 }

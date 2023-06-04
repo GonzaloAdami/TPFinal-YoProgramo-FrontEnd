@@ -35,7 +35,7 @@
           <img src="../../assets/img/proyect-new.png" class="card-img-top" alt="Slide 1" >
           <div class="card-body">
             <p class="card-text">¡Sube ya tu nuevo proyecto!</p>
-            <button type="button" class="btn-style">Ver el proyecto</button>
+            <button type="button" class="btn-style" data-bs-toggle="link" data-bs-target="#link">Ver el proyecto</button>
           </div>
         </div>
       </div>
@@ -62,12 +62,12 @@
       </div>
       <div class="modal-body" style="background-color: #ffffff; border-radius: 0px 0px 20px 20px;" >
         <div class="link-proyect d-flex justify-content-center">
-          <textarea name="" id="bio" cols="55" rows="1" class="link-text" placeholder="Pega el link de tu proyecto..."></textarea> 
+          <textarea name="" id="href" cols="55" rows="1" class="link-text" placeholder="Pega el link de tu proyecto..."></textarea>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn-exit" data-bs-toggle="modal">Cerrar</button>
-        <button type="button" class="btn-style" data-bs-dismiss="modal" onclick="crearProyecto()">Publicar</button>
+        <button type="button" class="btn-exit" data-bs-toggle="modal" data-bs-target="#card-modal">Cerrar</button>
+        <button type="button" class="btn-style"data-bs-toggle="modal" data-bs-target="#card-modal" >Publicar</button>
       </div>
     </div>
   </div>
@@ -83,27 +83,28 @@
         </h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" >
         <div class="background-modal-card d-flex ">
           <div class="card card-style">
             <div class="img-card-model" >
-              <label for="img">
-                <img src="../../assets/img/modal-icon-img.png" class="card-img-top" alt="edit" id="moda-card">
-                <form action="img" style="display: none;">
-                  <input type="file" id="img" name="img">
-                </form>
+              <label for="imagenUpdate">
+                <img src="{{upload}}" class="card-img-top" alt="edit" id="moda-card">
+                
+                  <input type="file" id="imagenUpdate" name="img"  (change)="updateProfile($event)">
+                
               </label>
             </div>
             <div class="card-body">
-              <textarea name="" id="bio" cols="29" rows="1" style="border-radius: 8px;"></textarea>
-              <button type="button" class="btn-style" data-bs-toggle="modal" data-bs-target="#link">Ver el proyecto</button>
+              
+              <textarea name="" id="texto" cols="29" rows="1" style="border-radius: 8px;" maxlength="200"></textarea>
+              <button type="button" class="btn-style" data-bs-toggle="modal" data-bs-target="#link">Ver proyecto</button>
             </div>                                     
           </div>     
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn-exit" data-bs-toggle="modal">Cerrar</button>
-        <button type="button" class="btn-style" data-bs-dismiss="modal" (click)="crearProyecto()">Publicar</button>
+        <button type="button" class="btn-exit" data-bs-toggle="modal" aria-label="Close">Cerrar</button>
+        <button type="button" class="btn-style" data-bs-dismiss="modal" (click)="crearProyecto()" aria-label="Close">Publicar</button>
       </div>
     </div>
   </div>

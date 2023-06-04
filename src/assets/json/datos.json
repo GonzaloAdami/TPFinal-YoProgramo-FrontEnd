@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "resolveJsonModule": true
+    },
+    "usuarios": [
+      {
+        "name": "Juan",
+        "apellido": "Perez",
+        "edad": "23",
+        "telefono": "987654321",
+        "email": "juan.perez@gmail"
+      }
+    ]
+  }
+  

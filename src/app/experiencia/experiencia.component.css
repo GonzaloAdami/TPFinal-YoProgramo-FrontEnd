@@ -26,7 +26,7 @@ margin: 0 auto;
   text-align: center;
   color: #ffffff;
   border: none;
-
+padding: 0.5vw;
   width: auto;  
   height: 3vw;
   border-radius: 20px 20px 20px 0px;
@@ -50,6 +50,7 @@ float: inline-end;
   bottom: -2vw;
   left: 4.3vw;
   margin-bottom: 0.5vw;
+  padding: 0.5vw;
   } 
   .btn-e:hover{
     height: auto;

@@ -14,6 +14,7 @@ export class PortafolioComponent implements OnInit {
   @Input() profile: string = "../../assets/img/perfil.gif";
   parentValue: number = 0;
   resultado: number = 0;
+
  
   constructor(private http: HttpClient) {}
 

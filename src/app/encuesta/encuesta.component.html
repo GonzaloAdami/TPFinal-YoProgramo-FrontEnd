@@ -1,7 +1,7 @@
 
     <div class="d-flex justify-content-center align-items-center" style="flex-direction: column; text-align: center;">
-        <h1>HTML5</h1>
-        <p>¡Completa el test y obtén un porcentaje!</p>
+        <h1>{{titulo}}</h1>
+        <p>{{subtitulo}}</p>
     <div class="skill">
         <div class="html">
           <svg xmlns="http://www.w3.org/2000/svg" version ="1.1" width="160px" height="160px">
@@ -29,12 +29,12 @@
     <label for="skillButton" style="display:inline-block; text-align: center;"> 
         <div style="margin-bottom: 1rem;">
         <h4 style="color: black;">{{pregunta}}</h4>
-        <button style="background-color: rgb(24, 140, 26); border: none; border-radius: 35px 35px 35px 35px;  box-shadow: 0.4px 0.4px 8px 0.4px; padding-top: 0.8rem; opacity: 0.5; color: rgb(255, 255, 255);"><p><b>{{opciones}}</b></p></button>
+        <button class="opciones"><p><b>{{opciones}}</b></p></button>
         </div>
         
         <form action="../js/skills.js" method="post" style="display: flex; gap: 30px; flex-direction: column; border: none; ">
-            <input type="button" name="afirmativo" class="btn-style" value="{{respuestaAfirmativa}}" id="RespuestaA" (click)="Data()"> 
-            <input type="button" name="negativo" class="btn-exit" value="{{respuestaNegativa}}" id="RespuestaB">
+            <input type="button" name="afirmativo" class="btn-style" value="Si" id="RespuestaA" (click)="Data()"> 
+            <input type="button" name="negativo" class="btn-exit" value="No" id="RespuestaB">
         </form>
     
     </label>

@@ -1,4 +1,4 @@
-import { Component, Output } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-proyecto',
@@ -8,14 +8,46 @@ import { Component, Output } from '@angular/core';
 export class ProyectoComponent {
   nuevoDataSlideTo: string = "";
   nuevoAriaLabel: string = "";
+  @Input() imagen: string = "";
+  @Input() upload: string = "";
+  @Input() link: string = "";
+
+  texto: string = "¡Añade tu proyecto!";
   constructor (){
     this.nuevoDataSlideTo = "2"
     this.nuevoAriaLabel = "3"
+    this.imagen = "";
+
+    this.upload = "../../assets/img/modal-icon-img.png";
+
   }
+  updateProfile(event: any) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    
+    reader.onload = (e: any) => {
+      const imagenUpdate = e.target.result;
+      // Aquí puedes realizar las acciones necesarias con la imagen cargada,
+      this.imagen = imagenUpdate;	
+      this.upload = imagenUpdate;
+    };
+    reader.readAsDataURL(file);
+   
+    
+      
+      
+    }
+  // Función para cerrar el modal
+
   crearProyecto(){  
+    let imagen = document.getElementById("imagenUpdate");
     let listaAdd = document.getElementById("agregarLista");
     let proyectAdd = document.getElementById("agregarProyecto");
     let itemList = document.createElement("button");
+    let text = document.getElementById("texto")as HTMLTextAreaElement;
+    this.texto = text.value;
+    let updateHref = document.getElementById("href")as HTMLTextAreaElement;
+    this.link = updateHref.value;
     itemList.setAttribute("type", "button");
     
     var dataSlideTo = itemList.getAttribute("data-bs-slide-to");
@@ -37,6 +69,8 @@ export class ProyectoComponent {
   carouselItem.classList.add("carousel-item");
   let center = document.createElement("div");
   center.classList.add("d-flex", "justify-content-center");
+  center.style.display = "flex";
+  center.style.justifyContent = "center";
   let card = document.createElement("div");
   card.style.backgroundClip = "border-box";
   card.style.backgroundColor = "rgb(255, 255, 255)";
@@ -69,7 +103,7 @@ export class ProyectoComponent {
   card.style.fontFamily = "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'";
   card.style.fontSize = "16px";
   card.style.fontWeight = "400";
-  card.style.height = "467.333px";
+  card.style.height = "auto";
   card.style.lineHeight = "24px";
   card.style.minWidth = "0px";
   card.style.position = "relative";
@@ -80,10 +114,9 @@ export class ProyectoComponent {
   card.style.borderRadius = "15px";
   card.style.boxShadow = "0px 0px 12px 0px rgba(0, 0, 0, 0.5)";
   card.style.margin = "5rem";
-card.setAttribute("data-bs-toggle", "modal");
-card.setAttribute("data-bs-target", "#card-modal");
+
   let img = document.createElement("img");
-  img.src = "../../assets/img/proyect-new.png";
+  img.src = this.imagen.toString();
   img.style.borderBottomLeftRadius = "15px";
   img.style.borderBottomRightRadius = "15px";
   img.style.borderTopLeftRadius = "15px";
@@ -117,7 +150,7 @@ cardBody.style.flexShrink = "1";
 cardBody.style.fontFamily = "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'";
 cardBody.style.fontSize = "16px";
 cardBody.style.fontWeight = "400";
-cardBody.style.height = "115.333px";
+cardBody.style.height = "auto";
 cardBody.style.lineHeight = "24px";
 cardBody.style.overflowWrap = "break-word";
 cardBody.style.paddingBottom = "16px";
@@ -131,7 +164,12 @@ cardBody.style.width = "350.667px";
   cardBody.classList.add("card-body");
   let textCard = document.createElement("p");
   textCard.classList.add("card-text");
-textCard.textContent = "¡Sube ya tu nuevo proyecto!";
+textCard.textContent = this.texto.toString();
+  let href = document.createElement("a");
+  href.target = "_blank";
+  href.href = this.link.toString();
+
+
   let link = document.createElement("button");
   link.style.alignItems = "flex-start";
 link.style.appearance = "button";
@@ -208,7 +246,8 @@ link.style.wordSpacing = "0px";
   card?.appendChild(img);
   card?.appendChild(cardBody);
   cardBody?.appendChild(textCard);
-  cardBody?.appendChild(link);
+  cardBody?.appendChild(href);
+  href.appendChild(link);
 console.log("creado")
 }
 }
