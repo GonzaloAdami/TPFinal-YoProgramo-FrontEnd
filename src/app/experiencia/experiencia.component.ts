@@ -9,7 +9,7 @@ import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@
 export class ExperienciaComponent {
   texto: string = '¡Añade tu experiencia!';
   nombre: string = 'Usuario';
-  @Input() profile: string = "../../assets/img/perfil.gif";
+  @Input() profileExperiencia: string = "";
   @Output() comentario: String ="¡Bienvenido a tu portafolio usuario disfruta de tu experiencia!";
   
 constructor(){
@@ -18,7 +18,9 @@ constructor(){
   NgOnInit(): void {
 
   }
- 
+ voidProfile():void{
+
+ }
   addElement() {
   
     // Crear el elemento <div> con una clase específica
@@ -44,7 +46,7 @@ constructor(){
     etiquetaExperiencia.style.marginBottom = "2rem";
     etiquetaExperiencia.style.padding = "0.5vw";
     let fotoPerfil = document.createElement('img');
-    fotoPerfil.src = this.profile;
+    fotoPerfil.src = this.profileExperiencia;
     fotoPerfil.style.width = "5vw";
     fotoPerfil.style.height = "5vw";
     fotoPerfil.style.borderRadius = "50%";
@@ -89,7 +91,7 @@ constructor(){
     reader.onload = (e: any) => {
       const imageProfile = e.target.result;
       // Aquí puedes realizar las acciones necesarias con la imagen cargada,
-      this.profile = imageProfile;
+      this.profileExperiencia = imageProfile;
       
     
     };

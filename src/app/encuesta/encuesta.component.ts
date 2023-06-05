@@ -10,11 +10,11 @@ export class EncuestaComponent implements OnInit {
   @Input() titulo:string = "Encuesta";
   @Input() subtitulo: string = "subtitulo";
   
-  @Input() pregunta: string = "pregunta";
-  @Input() pregunta1: string = "pregunta";
-  @Input() pregunta2: string = "pregunta";
-  @Input() pregunta3: string = "pregunta";
-  @Input() pregunta4: string = "pregunta";
+  @Input() pregunta: string = "";
+  @Input() pregunta1: string = "";
+  @Input() pregunta2: string = "";
+  @Input() pregunta3: string = "";
+  @Input() pregunta4: string = "";
 
   @Input() opciones: string = '';
   @Input() opciones1: string = '';
@@ -22,17 +22,21 @@ export class EncuestaComponent implements OnInit {
   @Input() opciones3: string = '';
   @Input() opciones4: string = '';
 
-  @Input() respuestaAfirmativa: string = "correcto";
-  @Input() respuestaNegativa: string = "incorrecto";
-
-  @Input() RespuestaA: string = "RespuestaA";
-  @Input() RespuestaB: string = "RespuestaB";
+  @Input() RespuestaA: string = "";
+  @Input() RespuestaB: string = "";
+  
+           displayA: string = "";
+           displayB: string = "";
 
   @Input() descripcion: string = '';
 
-  porcentaje: number = 0;
-  afirmativo: number = 0;
-  
+           porcentaje: number = 0;
+           afirmativo: number = 0;
+           state: string = '';
+
+           Correct: string = 'Si';
+           Incorrect: string = 'No';
+
   @Output() value: number = 0;
   @Output() valueChange: EventEmitter<number> = new EventEmitter<number>();
   
@@ -43,13 +47,15 @@ export class EncuestaComponent implements OnInit {
 
   constructor (){
     this.pregunta = "pregunta";
-    this.respuestaAfirmativa = "Si, conozco esas etiquetas";
-    this.respuestaNegativa = "No las conozco";
+
     this.RespuestaA = "RespuestaA2";
     this.RespuestaB = "RespuestaB2";
+
     this.porcentaje = 0;
+
     this.descripcion = '';
-    this.opciones = '<div> <p> <h1> <img> <a>';
+    this.opciones = '';
+
     this.afirmativo = 0;
     this.value = 0;
 
@@ -64,18 +70,7 @@ export class EncuestaComponent implements OnInit {
     let porcentaje = 0;
     
     this.pregunta = this.pregunta1;
-    this.opciones = this.opciones1;
-
-    if (yesButton && encuesta >= 5) {
-      yesButton?.addEventListener('click', () => {
-        alert("Ya no hay más tests");
-      });
-    } else if (NoButton && encuesta >= 5) {
-      NoButton?.addEventListener('click', () => {
-        alert("Ya no hay más tests");
-      });
-    }
-    
+    this.opciones = this.opciones1;   
   
     if (yesButton) {
       yesButton.addEventListener('click', () => {
@@ -83,47 +78,54 @@ export class EncuestaComponent implements OnInit {
         afirmativo = afirmativo + 25
         resultadoSkills = resultadoSkills + 118;  
     
-        console.log(encuesta);
-        console.log(afirmativo);
       if (encuesta === 1) {
       this.pregunta = this.pregunta2;
       this.opciones = this.opciones2;
-
-      this.respuestaAfirmativa = "Si las he usado";
-      this.respuestaNegativa = "No las he usado";
       this.porcentaje = 25;
       
     
     } else if (encuesta === 2) {
       this.pregunta = this.pregunta3;
       this.opciones = this.opciones3;
-
-      this.respuestaAfirmativa = "Si, se como hacerlo";
-      this.respuestaNegativa = "No, no se como hacerlo";
       this.porcentaje = 50;   
       
 
     } else if (encuesta === 3) {
       this.pregunta = this.pregunta4;
       this.opciones = this.opciones4;
-
-      this.respuestaAfirmativa = "Se utilizarlas";
-      this.respuestaNegativa = "No se como utilizarlas";
       this.porcentaje = 75;
       
 
     }else if (encuesta === 4) {
       afirmativo - 118;
-
-      this.value = resultadoSkills;
+ 
       this.pregunta = "";
       this.opciones = '¡Felicidades!, completaste la encuesta, tu resultado es : ' + afirmativo + '%';
-
-      this.respuestaAfirmativa = "Compartir";
-      this.respuestaNegativa = "No compartir resultado";
+      this.Correct = 'Compartir';
+      this.Incorrect = 'Cancelar';
       this.porcentaje = 100;
       this.value = resultadoSkills;
+   
       
+    }else if (encuesta === 5){
+      this.displayA = 'none';
+      this.Incorrect = 'Reintentar';  
+      this.value = afirmativo * 0 ;      
+    }else if (encuesta === 6){
+      encuesta = encuesta*0; 
+      this.displayA = '';
+      this.displayB = '';  
+
+      this.pregunta = this.pregunta1;
+      this.opciones = this.opciones1;
+
+      this.Correct = 'Si';
+      this.Incorrect = 'No';
+
+      this.porcentaje = 0;
+      afirmativo = 0;
+      this.value = this.value * 0;
+      console.log(afirmativo);
     }
       
       });
@@ -134,52 +136,50 @@ export class EncuestaComponent implements OnInit {
       
     if (NoButton) {
       NoButton.addEventListener('click', () => {
-        encuesta = encuesta + 1;
-        
+        encuesta = encuesta + 1;     
     
-            
-      console.log(encuesta);
-      console.log(afirmativo);
       if (encuesta === 1) {
       this.pregunta = this.pregunta2;
       this.opciones = this.opciones2;
-
-      this.respuestaAfirmativa = "Si las he usado";
-      this.respuestaNegativa = "No las he usado";
       this.porcentaje = 25;
       
     } else if (encuesta === 2) {
       this.pregunta = this.pregunta3;
       this.opciones = this.opciones3;
-
-      this.respuestaAfirmativa = "Si, se como hacerlo";
-      this.respuestaNegativa = "No, no se como hacerlo";
       this.porcentaje = 50;
       
     } else if (encuesta === 3) {
       this.pregunta = this.pregunta4;
       this.opciones = this.opciones4;
-      this.respuestaAfirmativa = "Se utilizarlas";
-      this.respuestaNegativa = "No se como utilizarlas";
       this.porcentaje = 75;
       ;
     }else if (encuesta === 4) {
-      afirmativo - 118;
-
       this.pregunta = "";
       this.opciones = '¡Felicidades!, completaste la encuesta, tu resultado es : ' + afirmativo + '%';
+      this.Correct = 'Compartir';
+      this.Incorrect = 'Cancelar';
+      this.porcentaje = 100;
+     
+    }else if (encuesta === 5){
+      this.displayA = 'none';
+      this.Incorrect = 'Reintentar';      
+    }else if (encuesta === 6){
+      encuesta = encuesta*0;   
 
-      this.respuestaAfirmativa = "Compartir";
-      this.respuestaNegativa = "No compartir resultado";
-      this.porcentaje = 100;   
-      
-    }else if (NoButton) {
-      NoButton.addEventListener('click', () => {
-        this.value = afirmativo * 0;
-        
-        
-        });
-      }
+      this.displayA = '';
+      this.displayB = '';  
+
+      this.pregunta = this.pregunta1;
+      this.opciones = this.opciones1;
+
+      this.Correct = 'Si';
+      this.Incorrect = 'No';
+
+      this.porcentaje = 0;
+      afirmativo = 0;
+      this.value = this.value * 0;
+      console.log(afirmativo);
+    }
   });}
 }
 

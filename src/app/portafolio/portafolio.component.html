@@ -32,7 +32,7 @@
     </nav>
 </section>
 <section class="perfil-usuario">    <!--Portada-->  
-  <app-portada></app-portada>
+  <app-portada (UpdateProfile)="handleUpdateProfile($event)"></app-portada>
 </section>                
 <section class="mt">         <!--Biografia-->
   <div class="box">
@@ -44,7 +44,7 @@
 </section>
 <section>          <!--Experiencia-->
   <div class="box">
-    <app-experiencia></app-experiencia>
+    <app-experiencia [profileExperiencia]="this.profile"></app-experiencia>
   </div>
 </section>
 <section >          <!--Educacion-->

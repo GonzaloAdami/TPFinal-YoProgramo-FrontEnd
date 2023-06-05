@@ -4,7 +4,9 @@ background-color: #e2edef;
   width: 100vw; /* Asegurarse de que el contenedor ocupe todo el alto de la ventana */
 }
 
-
+img{
+  object-fit: cover;
+}
 
 .box{
   background-color: aliceblue;

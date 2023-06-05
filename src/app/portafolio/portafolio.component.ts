@@ -11,18 +11,20 @@ export class PortafolioComponent implements OnInit {
   datos$!: Observable<any>;
  @Input() porcentaje: number = 0;
   circuloHTML: number = 0;
-  @Input() profile: string = "../../assets/img/perfil.gif";
+  profile: string = "";
   parentValue: number = 0;
   resultado: number = 0;
-
+  @Output() pushProfile =  new EventEmitter<string>();
  
-  constructor(private http: HttpClient) {}
-
+  constructor(private http: HttpClient) {
+    this.profile = '../../assets/img/perfil.gif';
+  }
+  
   Data(e: number) {
     this.resultado = e;
   }
   ngOnInit(): void {
-
+    
     this.obtenerDatos().subscribe(
       (response: any) => {
         const datosJson = JSON.stringify(response);
@@ -37,7 +39,11 @@ export class PortafolioComponent implements OnInit {
       }
     );
   }
-  
+  handleUpdateProfile(event: any):void {
+    this.profile = event.toString();
+    
+   
+  }
   /*mostrarNombresUsuarios(): void {
     const div = document.getElementById('nombre-usuario');
     if (div) {
@@ -55,15 +61,17 @@ export class PortafolioComponent implements OnInit {
     return this.http.get<any>('https://backend-0vro.onrender.com');
   }
 
-  saberValorEncuesta(porcentaje: number) {
-    console.log(porcentaje);
-  }
+ 
 
-  saberValorCirculo(porcentaje: number) {
-    porcentaje = (porcentaje / 25) * 118;
-    console.log(porcentaje);
-  }
+  //saberValorCirculo(porcentaje: number) {
+    //porcentaje = (porcentaje / 25) * 118;
+    //console.log(porcentaje);
+  //}
   onValueChange(newValue: number) {
     this.parentValue = newValue;
   }
 }
+function handleUpdateProfile(e: any) {
+  throw new Error('Function not implemented.');
+}
+

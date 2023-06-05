@@ -10,7 +10,7 @@
 
 <div class="experience-container">
   <div class="imgLogo">
-    <img [src]="profile" alt="">
+    <img src="{{profileExperiencia}}" alt="">
   </div>
   
     <button class="btn-user just justify-content-center" data-bs-toggle="modal" data-bs-target="#experiencia-modal" id="editor">
@@ -41,7 +41,7 @@
             </div>
             <div class="background-modal-experience d-flex" >
               <div class="imgLogo">
-                <img [src]="profile" alt="" class="imgLogo">
+                <img src="{{profileExperiencia}}" alt="" class="imgLogo">
               </div>
              <button type="button" class="btn-user">
                 <p class="etiqueta-experiencia-texto" id="charCount">{{ texto }}</p>

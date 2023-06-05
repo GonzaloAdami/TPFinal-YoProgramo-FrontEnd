@@ -1,3 +1,6 @@
+img{
+  object-fit: cover;
+}
 .card-style {
 width: 22rem;
 border-radius: 15px 15px 15px 15px;
