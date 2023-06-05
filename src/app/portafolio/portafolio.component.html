@@ -96,26 +96,23 @@
           <h1 class="modal-title fs-5" id="staticBackdropLabel">Skills</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form action="../../datos.usuario.json" method="POST" id="encuesta">
-          <!--Diseño-->
-          <div class="modal-body">
-            <div class="background-modal-card d-flex ">          
-              <div id="skillsCarousel" class="carousel slide" data-ride="carousel">
-                <!--Listado de elementos-->
-                <div class="carousel-indicators" id="listEncuesta">
-                  <button type="button" data-bs-target="#encuesta" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#encuesta" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#encuesta" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  <button type="button" data-bs-target="#encuesta" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                  <button type="button" data-bs-target="#encuesta" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                </div>
-                <!--carrousel header-->
-                <div class="carousel-inner">                
-                  <div class="carousel-item active">
-                    <div class="card card-style">
-                      <div id="encuesta" class="carousel slide" data-ride="carousel">
-                        <!--Contenido-->
-                        <div class="carousel-inner" data-bs-slide-to="0">  
+        <div class="modal-body">
+          <div class="background-modal-card d-flex ">          
+                  <div class="card card-style">
+                    <div id="encuesta" class="carousel slide" data-ride="carousel">
+                      <!--Contenido-->
+                      <div class="carousel-indicators" id="listEncuesta" style="position: relative; background-color: rgb(46, 145, 184); border-radius: 4vw; opacity: 0.7;">
+                        <button type="button" data-bs-target="#encuesta" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#encuesta" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#encuesta" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#encuesta" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#encuesta" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#encuesta" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#encuesta" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                        <button type="button" data-bs-target="#encuesta" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                      </div>
+                      <div class="carousel-inner" data-bs-slide-to="0"> 
+                        <div class="carousel-item active">
                           <app-encuesta (valueChange)="Data($event)" 
                             [titulo]="'HTML5'"
                             [subtitulo]="'Arquietectura web'"
@@ -133,102 +130,153 @@
                             [opciones4]="'header | main | section | footer | nav'">
                           </app-encuesta>   
                         </div>
-                        <div class="carousel-item" data-bs-slide-to="1">                                                                                           
+                        <div class="carousel-item">                                                                                           
                           <app-encuesta (valueChange)="Data($event)" 
                             [titulo]="'CSS3'"
-                            [subtitulo]="'Arquietectura web'"
+                            [subtitulo]="'Hojas de estilo'"
 
-                            [pregunta1]="'Pregunta 1'" 
-                            [opciones1]="'Opcion 1'"
+                            [pregunta1]="'¿Estás familiarizado con el uso de la propiedad font-size en CSS para cambiar el tamaño del texto?'" 
+                            [opciones1]="'font-size'"
 
-                            [pregunta2]="'pregunta 2'"
-                            [opciones2]="'Opcion 2'" 
+                            [pregunta2]="'¿Estás familiarizado con el uso de la propiedad box-sizing en CSS y cómo afecta al modelo de caja de los elementos?'"
+                            [opciones2]="'box-sizing'" 
 
-                            [pregunta3]="'pregunta 3'"
-                            [opciones3]="'Opcion 3'"  
+                            [pregunta3]="'¿Estás familiarizado con el uso de flexbox en CSS para crear diseños flexibles y responsivos?'"
+                            [opciones3]="'flexbox'"  
                             
-                            [pregunta4]="'pregunta 4'"
-                            [opciones4]="'Opcion 4'">
-                          </app-encuesta>  
-                        </div>
-                        <div class="carousel-item" data-bs-slide-to="2">  
-                          <app-encuesta (valueChange)="Data($event)" 
-                            [titulo]="'HTML5'"
-                            [subtitulo]="'Arquietectura web'"
-
-                            [pregunta1]="'Pregunta 1'" 
-                            [opciones1]="'Opcion 1'"
-
-                            [pregunta2]="'pregunta 2'"
-                            [opciones2]="'Opcion 2'" 
-
-                            [pregunta3]="'pregunta 3'"
-                            [opciones3]="'Opcion 3'"  
-                            
-                            [pregunta4]="'pregunta 4'"
-                            [opciones4]="'Opcion 4'">
-                         </app-encuesta>  
-                      </div>
-                      <div class="carousel-item">  
-                          <app-encuesta (valueChange)="Data($event)" 
-                            [titulo]="'HTML5'"
-                            [subtitulo]="'Arquietectura web'"
-
-                            [pregunta1]="'Pregunta 1'" 
-                            [opciones1]="'Opcion 1'"
-
-                            [pregunta2]="'pregunta 2'"
-                            [opciones2]="'Opcion 2'" 
-
-                            [pregunta3]="'pregunta 3'"
-                            [opciones3]="'Opcion 3'"  
-                            
-                            [pregunta4]="'pregunta 4'"
-                            [opciones4]="'Opcion 4'">
+                            [pregunta4]="'¿Estás familiarizado con el concepto de animaciones en CSS, utilizando @keyframes y la propiedad animation, para crear efectos visuales dinámicos en elementos de la página?'"
+                            [opciones4]="'@keyframes | animation'">
                           </app-encuesta>  
                         </div>
                         <div class="carousel-item">  
                           <app-encuesta (valueChange)="Data($event)" 
-                            [titulo]="'HTML5'"
-                            [subtitulo]="'Arquietectura web'"
+                            [titulo]="'JavaScript'"
+                            [subtitulo]="'Lenguaje de programación interpretado'"
 
-                            [pregunta1]="'Pregunta 1'" 
-                            [opciones1]="'Opcion 1'"
+                            [pregunta1]="'¿Estás familiarizado con la declaración de variables en JavaScript utilizando las palabras clave var, let o const?'" 
+                            [opciones1]="'var | let | const'"
 
-                            [pregunta2]="'pregunta 2'"
-                            [opciones2]="'Opcion 2'" 
+                            [pregunta2]="'¿Estás familiarizado con el uso de funciones en JavaScript, tanto funciones declaradas como funciones anónimas?'"
+                            [opciones2]="'Functions'" 
 
-                            [pregunta3]="'pregunta 3'"
-                            [opciones3]="'Opcion 3'"  
+                            [pregunta3]="'¿Estás familiarizado con el manejo de eventos en JavaScript, como la detección de clics (click) o cambios en los elementos (change)?'"
+                            [opciones3]="'(click) | (change)'"  
                             
-                            [pregunta4]="'pregunta 4'"
-                            [opciones4]="'Opcion 4'">
+                            [pregunta4]="'¿Estás familiarizado con el concepto de promesas en JavaScript y cómo se utilizan para manejar operaciones asíncronas?'"
+                            [opciones4]="'Promise'">
+                        </app-encuesta>  
+                      </div>
+                      <div class="carousel-item">  
+                          <app-encuesta (valueChange)="Data($event)" 
+                            [titulo]="'Java'"
+                            [subtitulo]="' Lenguaje de programación de alto nivel'"
+
+                            [pregunta1]="'¿Estás familiarizado con la estructura básica de un programa Java, incluyendo la declaración de clase y el método principal main?'" 
+                            [opciones1]="'main'"
+
+                            [pregunta2]="'¿Estás familiarizado con el uso de variables en Java, incluyendo la declaración y asignación de valores?'"
+                            [opciones2]="'int | String | boolean | char'" 
+
+                            [pregunta3]="'¿Estás familiarizado con los conceptos de herencia y polimorfismo en Java, y cómo se utilizan para crear jerarquías de clases y lograr la reutilización de código?'"
+                            [opciones3]="'herencia | polimorfismo '"  
+                            
+                            [pregunta4]="'¿Estás familiarizado con el manejo de excepciones en Java, incluyendo el uso de bloques try-catch y la declaración de excepciones personalizadas?'"
+                            [opciones4]="'try-catch'">
                           </app-encuesta>  
                         </div>
-                        <!--Boton carrousel-->
+                        <div class="carousel-item">  
+                          <app-encuesta (valueChange)="Data($event)" 
+                            [titulo]="'Ingles'"
+                            [subtitulo]="'Idioma'"
+
+                            [pregunta1]="'¿Estás familiarizado con el uso de los pronombres personales en inglés?'" 
+                            [opciones1]="'I | you | we | they'"
+
+                            [pregunta2]="'¿Estás familiarizado con la conjugación de los verbos regulares en inglés en los tiempos pasado y presente?'"
+                            [opciones2]="'Conjugación de verbos regulares'" 
+
+                            [pregunta3]="'¿Estás familiarizado con el uso de los tiempos verbales continuos (presente continuo, pasado continuo, futuro continuo) en inglés y cómo se forman?'"
+                            [opciones3]="'Tiempos verbales continuos'"  
+                            
+                            [pregunta4]="'¿Estás familiarizado con el uso de los tiempos verbales perfectos (presente perfecto, pasado perfecto, futuro perfecto) en inglés y cómo se construyen?'"
+                            [opciones4]="'Tiempos verbales perfectos'">
+                          </app-encuesta>  
+                        </div>
+                        <div class="carousel-item">  
+                          <app-encuesta (valueChange)="Data($event)" 
+                            [titulo]="'Scrum'"
+                            [subtitulo]="'Marco de trabajo ágil'"
+
+                            [pregunta1]="'¿Estás familiarizado con el rol de Scrum Master en el marco de trabajo de Scrum?'" 
+                            [opciones1]="'Scrum Master'"
+
+                            [pregunta2]="'¿Estás familiarizado con los eventos de Scrum, como la reunión diaria (Daily Scrum) y la revisión de Sprint (Sprint Review)?'"
+                            [opciones2]="'(Daily Scrum) | (Sprint Review)'" 
+
+                            [pregunta3]="'¿Estás familiarizado con los artefactos de Scrum, como el Product Backlog y el Sprint Backlog?'"
+                            [opciones3]="'Product Backlog | Sprint Backlog'"  
+                            
+                            [pregunta4]="'¿Estás familiarizado con los conceptos de User Stories y Story Points en el contexto de Scrum?'"
+                            [opciones4]="'User Stories | Story Points'">
+                          </app-encuesta>  
+                        </div>
+                        <div class="carousel-item">  
+                          <app-encuesta (valueChange)="Data($event)" 
+                            [titulo]="'DeVOps'"
+                            [subtitulo]="'Conjunto de prácticas'"
+
+                            [pregunta1]="'¿Estás familiarizado con el concepto de integración continua (CI) y su importancia en el desarrollo de software?'" 
+                            [opciones1]="'(CI)'"
+
+                            [pregunta2]="'¿Estás familiarizado con el uso de herramientas de automatización de despliegue, como Docker o Kubernetes?'"
+                            [opciones2]="'Docker | Kubernetes'" 
+
+                            [pregunta3]="'¿Estás familiarizado con la práctica de infraestructura como código (IaC) y la utilización de herramientas como Terraform o Ansible?'"
+                            [opciones3]="'Terraform | Ansible'"  
+                            
+                            [pregunta4]="'¿Estás familiarizado con la implementación de monitoreo y observabilidad en un entorno DevOps, utilizando herramientas como Prometheus o Grafana?'"
+                            [opciones4]="'Prometheus | Grafana'">
+                          </app-encuesta>  
+                        </div>
+                        <div class="carousel-item">  
+                          <app-encuesta (valueChange)="Data($event)" 
+                            [titulo]="'Git'"
+                            [subtitulo]="'Sistema de control de versiones'"
+
+                            [pregunta1]="'¿Estás familiarizado con el concepto de control de versiones y has utilizado Git para gestionar tus proyectos?'" 
+                            [opciones1]="'git init | git status'"
+
+                            [pregunta2]="'¿Estás familiarizado con los comandos básicos de Git?'"
+                            [opciones2]="'git add | git commit | git push'" 
+
+                            [pregunta3]="'¿Estás familiarizado con el uso de ramas (branches) en Git y sabes cómo crear, fusionar y eliminar ramas?'"
+                            [opciones3]="'git branch | git checkout | git merge'"  
+                            
+                            [pregunta4]="'¿Estás familiarizado con conceptos avanzados de Git, como rebasing, cherry-picking y resolución de conflictos?'"
+                            [opciones4]="'git add | git commit'">
+                          </app-encuesta>  
+                        </div><!--Boton carrousel-->  
                       </div>  
-                    </div>      
-                    <button class="carousel-control-prev" type="button" data-bs-target="#encuesta" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#encuesta" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>  
+                      <button class="carousel-control-prev" type="button" data-bs-target="#encuesta" data-bs-slide="prev" style="position: relative; left: -6vw; top: -25vw;">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#encuesta" data-bs-slide="next"  style="position: relative; right: -26vw; top: -27vw;">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>  
+                    </div>       
                   </div>      
                 </div>    
-              </div>   
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn-exit" data-bs-toggle="modal">Cerrar</button>
+                <button type="button" class="btn-style" data-bs-dismiss="modal" onclick="skillPulic();" id="skillButton">Publicar</button>
+              </div>    
             </div>   
-          </div>  
-          <div class="modal-footer">
-            <button type="button" class="btn-exit" data-bs-toggle="modal">Cerrar</button>
-            <button type="button" class="btn-style" data-bs-dismiss="modal" onclick="skillPulic();" id="skillButton">Publicar</button>
-          </div> 
-        </form>
-      </div>  
-    </div>  
-  </div>  
+          </div>           
+       
+        </div>  
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
