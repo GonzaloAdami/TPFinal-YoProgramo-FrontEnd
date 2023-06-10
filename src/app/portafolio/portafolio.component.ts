@@ -14,30 +14,46 @@ export class PortafolioComponent implements OnInit {
   profile: string = "";
   parentValue: number = 0;
   resultado: number = 0;
+  encuesta: number = 0;
+
   @Output() pushProfile =  new EventEmitter<string>();
+  @Output() encuestaReset = new EventEmitter<number>();
  
   constructor(private http: HttpClient) {
     this.profile = '../../assets/img/perfil.gif';
+    this.encuesta = 3;
+    this.porcentaje = 0;
   }
   
+  
+  resetEncuesta() {
+    this.encuesta = this.encuesta*0;
+  }
   Data(e: number) {
     this.resultado = e;
   }
   ngOnInit(): void {
-    
-    this.obtenerDatos().subscribe(
+    const next = document.getElementById("next");
+    if (next) {
+      next.addEventListener('click', () => {
+      
+        this.porcentaje = this.porcentaje * 0;
+        this.encuesta = this.encuesta * 0;
+      ;
+      });}
+   /* this.obtenerDatos().subscribe(
       (response: any) => {
         const datosJson = JSON.stringify(response);
         console.log(datosJson);
         
         /*this.usuarios = JSON.parse(datosJson); // Parsea los datos JSON a un objeto JavaScript
         console.log(this.usuarios);
-        this.mostrarNombresUsuarios();*/
+        this.mostrarNombresUsuarios();
       },
       (error: any) => {
         console.error('Error al obtener los datos:', error);
       }
-    );
+    );*/
   }
   handleUpdateProfile(event: any):void {
     this.profile = event.toString();

@@ -25,7 +25,7 @@
             <app-social [color]="'#131BCC'" [color2]="'#135CCC'" [name]="'LinkedIn'" [clase]="'fa fa-linkedin'" [display]="'on'" [link]="'https://www.linkedin.com/'"></app-social>  
             <app-social [color]="'#31314D'" [color2]="'#323234'" [name]="'Github'" [imagen]="'../../assets/img/github.png'" [link]="'https://github.com/'" ></app-social>   
             <app-social [color]="'#67B5DC'" [color2]="'#85CEF3'" [name]="'Twitter'" [clase]="'fa fa-twitter'" [display]="'on'" [link]="'https://twitter.com/'"></app-social> 
-            <app-social [color]="'#31314D'" [color2]="'#323234'" [name]="'Login'" [imagen]="'../../assets/img/login.png'" [link]="'https://yoprogramo-frontend-2d963.firebaseapp.com'"></app-social>       
+            <app-social [color]="'#31314D'" [color2]="'#323234'" [name]="'Login'" [imagen]="'../../assets/img/login.png'" [link]="'./login'"></app-social>       
             
           </ul>
         </div>
@@ -113,7 +113,7 @@
                       </div>
                       <div class="carousel-inner" data-bs-slide-to="0"> 
                         <div class="carousel-item active">
-                          <app-encuesta (valueChange)="Data($event)" 
+                          <app-encuesta [i] = this.encuesta (valueChange)="Data($event)" 
                             [titulo]="'HTML5'"
                             [subtitulo]="'Arquietectura web'"
 
@@ -127,11 +127,14 @@
                             [opciones3]="'input | select | textarea'"  
                             
                             [pregunta4]="'¿Estás familiarizado con el uso de etiquetas semánticas en HTML, y cómo contribuyen a una estructura de página web más clara y significativa?'"
-                            [opciones4]="'header | main | section | footer | nav'">
-                          </app-encuesta>   
+                            [opciones4]="'header | main | section | footer | nav'"
+
+                            
+                            
+                            ></app-encuesta>   
                         </div>
                         <div class="carousel-item">                                                                                           
-                          <app-encuesta (valueChange)="Data($event)" 
+                          <app-encuesta  (valueChange)="Data($event)" 
                             [titulo]="'CSS3'"
                             [subtitulo]="'Hojas de estilo'"
 
@@ -145,11 +148,16 @@
                             [opciones3]="'flexbox'"  
                             
                             [pregunta4]="'¿Estás familiarizado con el concepto de animaciones en CSS, utilizando @keyframes y la propiedad animation, para crear efectos visuales dinámicos en elementos de la página?'"
-                            [opciones4]="'@keyframes | animation'">
+                            [opciones4]="'@keyframes | animation'"
+                            [RespuestaA]="'CSS3C'"
+                            [RespuestaB]="'CSS3I'"
+                            
+                           
+                            >
                           </app-encuesta>  
                         </div>
                         <div class="carousel-item">  
-                          <app-encuesta (valueChange)="Data($event)" 
+                          <app-encuesta (valueChange)="Data($event)"
                             [titulo]="'JavaScript'"
                             [subtitulo]="'Lenguaje de programación interpretado'"
 
@@ -163,7 +171,9 @@
                             [opciones3]="'(click) | (change)'"  
                             
                             [pregunta4]="'¿Estás familiarizado con el concepto de promesas en JavaScript y cómo se utilizan para manejar operaciones asíncronas?'"
-                            [opciones4]="'Promise'">
+                            [opciones4]="'Promise'"
+
+                            >
                         </app-encuesta>  
                       </div>
                       <div class="carousel-item">  
@@ -255,13 +265,13 @@
                             [pregunta4]="'¿Estás familiarizado con conceptos avanzados de Git, como rebasing, cherry-picking y resolución de conflictos?'"
                             [opciones4]="'git add | git commit'">
                           </app-encuesta>  
-                        </div><!--Boton carrousel-->  
+                        </div>  
                       </div>  
-                      <button class="carousel-control-prev" type="button" data-bs-target="#encuesta" data-bs-slide="prev" style="position: relative; left: -6vw; top: -25vw;">
+                      <button class="carousel-control-prev" type="button" data-bs-target="#encuesta" data-bs-slide="prev" style="position: relative; left: -6vw; top: -25vw;" id="next">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                       </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#encuesta" data-bs-slide="next"  style="position: relative; right: -26vw; top: -27vw;">
+                      <button class="carousel-control-next" type="button" data-bs-target="#encuesta" data-bs-slide="next"  style="position: relative; right: -26vw; top: -27vw;" id="prev">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                       </button>  

@@ -24,6 +24,7 @@ export class EncuestaComponent implements OnInit {
 
   @Input() RespuestaA: string = "";
   @Input() RespuestaB: string = "";
+  @Input() i: number = 0; 
   
            displayA: string = "";
            displayB: string = "";
@@ -59,6 +60,7 @@ export class EncuestaComponent implements OnInit {
     this.afirmativo = 0;
     this.value = 0;
 
+    this.i = 0;
   }
   ngOnInit(): void { 
     const yesButton = document.getElementById("RespuestaA");
@@ -66,7 +68,8 @@ export class EncuestaComponent implements OnInit {
     
     let resultadoSkills = 0;
     let afirmativo = 0;
-    let encuesta = 0;
+   
+    this.i= 0;
     let porcentaje = 0;
     
     this.pregunta = this.pregunta1;
@@ -74,45 +77,47 @@ export class EncuestaComponent implements OnInit {
   
     if (yesButton) {
       yesButton.addEventListener('click', () => {
-        encuesta = encuesta + 1;
+        this.i = this.i + 1;
+        this.i = this.i;
         afirmativo = afirmativo + 25
-        resultadoSkills = resultadoSkills + 118;  
+        
+      
     
-      if (encuesta === 1) {
+      if (this.i === 1) {
       this.pregunta = this.pregunta2;
       this.opciones = this.opciones2;
       this.porcentaje = 25;
       
     
-    } else if (encuesta === 2) {
+    } else if (this.i === 2) {
       this.pregunta = this.pregunta3;
       this.opciones = this.opciones3;
       this.porcentaje = 50;   
       
 
-    } else if (encuesta === 3) {
+    } else if (this.i === 3) {
       this.pregunta = this.pregunta4;
       this.opciones = this.opciones4;
       this.porcentaje = 75;
       
 
-    }else if (encuesta === 4) {
+    }else if (this.i === 4) {
       afirmativo - 118;
  
       this.pregunta = "";
-      this.opciones = '¡Felicidades!, completaste la encuesta, tu resultado es : ' + afirmativo + '%';
+      this.opciones = '¡Felicidades!, completaste la this.i, tu resultado es : ' + afirmativo + '%';
       this.Correct = 'Compartir';
       this.Incorrect = 'Cancelar';
       this.porcentaje = 100;
-      this.value = resultadoSkills;
+      this.value = afirmativo;
    
       
-    }else if (encuesta === 5){
+    }else if (this.i === 5){
       this.displayA = 'none';
       this.Incorrect = 'Reintentar';  
       this.value = afirmativo * 0 ;      
-    }else if (encuesta === 6){
-      encuesta = encuesta*0; 
+    }else if (this.i === 6){
+      this.i = this.i*0; 
       this.displayA = '';
       this.displayB = '';  
 
@@ -136,35 +141,35 @@ export class EncuestaComponent implements OnInit {
       
     if (NoButton) {
       NoButton.addEventListener('click', () => {
-        encuesta = encuesta + 1;     
+        this.i = this.i + 1;     
     
-      if (encuesta === 1) {
+      if (this.i === 1) {
       this.pregunta = this.pregunta2;
       this.opciones = this.opciones2;
       this.porcentaje = 25;
       
-    } else if (encuesta === 2) {
+    } else if (this.i === 2) {
       this.pregunta = this.pregunta3;
       this.opciones = this.opciones3;
       this.porcentaje = 50;
       
-    } else if (encuesta === 3) {
+    } else if (this.i === 3) {
       this.pregunta = this.pregunta4;
       this.opciones = this.opciones4;
       this.porcentaje = 75;
       ;
-    }else if (encuesta === 4) {
+    }else if (this.i === 4) {
       this.pregunta = "";
-      this.opciones = '¡Felicidades!, completaste la encuesta, tu resultado es : ' + afirmativo + '%';
+      this.opciones = '¡Felicidades!, completaste la this.i, tu resultado es : ' + afirmativo + '%';
       this.Correct = 'Compartir';
       this.Incorrect = 'Cancelar';
       this.porcentaje = 100;
      
-    }else if (encuesta === 5){
+    }else if (this.i === 5){
       this.displayA = 'none';
       this.Incorrect = 'Reintentar';      
-    }else if (encuesta === 6){
-      encuesta = encuesta*0;   
+    }else if (this.i === 6){
+      this.i = this.i*0;   
 
       this.displayA = '';
       this.displayB = '';  
@@ -187,5 +192,8 @@ export class EncuestaComponent implements OnInit {
 
 Data(){
   this.valueChange.emit(this.value);
+  this.value = this.value * 0;
+ 
+ 
 }
 }

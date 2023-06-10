@@ -11,13 +11,36 @@ body {
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   height: 100vh;
-  margin: -20px 0 50px;
   background-size: cover;
+  object-fit: cover;
+}
+.form-container sign-in-container {
+  margin: 0 auto;
+  position: relative;
+
 }
 
+.error {
+  background-color: rgba(223, 161, 161, 0.14);
+ 
+  border: 1px solid rgba(136, 16, 16, 0.641);
+}
+
+.error:focus {
+  border: 2px solid rgba(255, 0, 0, 0.4);
+  background-color: rgb(254, 232, 232);
+}
+.errorMesagge {
+  background-color: red;
+  color: rgb(230, 230, 230);
+  border-radius: 2vw;
+  opacity: 0.6;
+  padding: 0.3vw 1vw;
+  font-size: 1.2vw;
+}
 h1 {
   font-weight: bold;
-  margin: 0;
+  margin: 1vw 0;
 }
 h2 {
   text-align: center;
@@ -73,9 +96,11 @@ form {
 input {
   background-color: #eee;
   border: none;
+  outline: none;
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
+  border-radius: 0.5vw;
 }
 .container {
   background-color: #fff;
