@@ -1,4 +1,4 @@
-<h3 class="titulo justify-content-center d-flex">Experiencias</h3>
+<h1 class="justify-content-center d-flex">Experiencias</h1>
 
 <div style="display: flex; flex-direction: row;">
 
@@ -14,7 +14,7 @@
   </div>
   
     <button class="btn-user just justify-content-center" data-bs-toggle="modal" data-bs-target="#experiencia-modal" id="editor">
-      <p class="text-experiencia">Añadir experiencia<img src="../../assets/img/newViolet.png" alt="new" class="logo-experiencias"></p>
+      <p class="text-experiencia">Añadir experiencia<img src="../../assets/img/newViolet.webp" alt="new" class="logo-experiencias"></p>
     </button>
   
 </div>
@@ -30,7 +30,7 @@
         <div class="contenedor">
           <div class="box">
             <label for=""><b style="color: rgb(44, 121, 202);">Escribe tu experiencia</b></label>
-            <textarea [(ngModel)]="texto" class="form-control" cols="70" rows="1" id="myTextarea" maxlength="40"></textarea>
+            <textarea [(ngModel)]="texto" class="inputExperiencia" cols="50" rows="1" id="myTextarea" maxlength="40"></textarea>
          
           <div class="box-skill">
             <div style="padding-bottom: 10px;">
@@ -84,7 +84,7 @@
 </div>
 <div class="background-chat-experiencia">
   <div style="text-align: right; padding-bottom: 2rem;">
-  <textarea name="text" cols="35" rows="1" style="border-radius: 10px 10px 10px 10px;" id="myTextarea" maxlength="100"></textarea>
+  <textarea name="text" cols="45" rows="1" class="inputExperiencia" id="chat" maxlength="100"></textarea>
 </div> 
 </div>
 <script src="../../assets/js/documentCreateElement.js"></script>

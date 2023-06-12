@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder, 
     private http: HttpClient,  
-    @Inject(Router) private ruta: Router
+    private router: Router
     ) { }
    
   ngOnInit(): void {
@@ -61,10 +62,10 @@ export class LoginComponent implements OnInit {
           (response) => {
             // Verificar la respuesta del servidor y redirigir a la página correspondiente
             if (response.success) {
-             
+              this.router.navigate(['/portafolio']);
             } else {
              
-              window.location.href = '/portafolio';
+              this.router.navigate(['/portafolio']);
             }
           },
           (error) => {

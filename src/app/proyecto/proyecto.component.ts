@@ -16,9 +16,9 @@ export class ProyectoComponent {
   constructor (){
     this.nuevoDataSlideTo = "2"
     this.nuevoAriaLabel = "3"
-    this.imagen = "";
-
-    this.upload = "../../assets/img/modal-icon-img.png";
+    this.imagen = "../../assets/img/default.webp";
+   
+    this.upload = "../../assets/img/modal-icon-img.webp";
 
   }
   updateProfile(event: any) {

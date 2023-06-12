@@ -14,10 +14,17 @@ export class SocialComponent {
   @Input() alt: string = '';
   @Input() display: string = '';
   @Input() link: string = '';
+  @Input() modal: string = '';
+  @Input() modalDisplay: string = '';
+  @Input() linkDisplay: string = '';
+  @Input() target: string = '';
 constructor() {
   this.color = '';
   this.color2 = '';
   this.name = '';
   this.clase = '';
+  this.modal = '';
+  this.modalDisplay = 'on';
+  this.linkDisplay = '';
 }
 }

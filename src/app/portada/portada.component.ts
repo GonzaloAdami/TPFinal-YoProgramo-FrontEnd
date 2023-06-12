@@ -16,8 +16,8 @@ import  usuariodatos from '../../assets/json/datos.json';
 
 
 export class PortadaComponent {
-@Output() banner: string = '../../assets/img/banner.png';
-@Output() profile: string = '../../assets/img/perfil.gif';
+@Output() banner: string = '../../assets/img/banner.webp';
+@Output() profile: string = '../../assets/img/perfil.webp';
 @Output() UpdateProfile =  new EventEmitter<string>();
 @Input() nombre: String = 'Usuario';
 usuario: any = usuariodatos;

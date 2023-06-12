@@ -1,45 +1,19 @@
-
-
-.new-experience{
-    border-radius: 60px;
-    text-decoration: none;
-    box-shadow: 2px;
-    text-align: center;
-    margin: 10px;
-    background-color: rgba(65, 123, 230, 0.588);
-    border: #D9DCF1;
-    color: rgb(251, 251, 251);
+/* Input */
+.inputBiografia{
+    resize: none;
+    border: none;
+    border-radius: 1vw;
+    border: none;
+    padding: 0.3vw;
+    outline: none;
+    transition: 0.25s;
+}
+.inputBiografia:focus{
+    border: 1px solid #1274BB; ;
+    outline: none;
 }
 
-button img{
-margin-left: 1rem;
-}
-
-.container-skill-button{
-    padding-top: 2rem;
-}
-
-.img-modal{
-    height: 35px;
-    width: 35px;
-   
-
-}
-
-
-
-.modal-title{
-    color: #fff;
-    background-color: #1274bb;
-    border-radius: 35px 35px;
-    box-shadow: 0.5px 0.5px 10px rgba(0, 0, 0, .5);
-    padding: 10px 20px;
-   
-    
-   
-}
-
-
+/*Buttons*/
 .btn-exit:hover{
     background-color: rgb(194, 38, 38);
     border-color: rgb(194, 38, 38);
@@ -49,38 +23,58 @@ margin-left: 1rem;
     border: 1px solid #ae1111;
     background-color: #ae1111;
     color: #FFFFFF;
-    font-size: 1vw;
+    font-size: 12px;
     font-weight: bold;
-    padding: 0.8vw 2vw;
+    padding: 12px 45px;
     box-shadow: 2px 12px 12px 2px rgba(0, 0, 0, 0.1);
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: transform 80ms ease-in;    
-    margin: 1vw;  
+    transition: transform 80ms ease-in;  
 }
 
 .btn-style{
-  border-radius: 50px;
-  border: 1px solid #1274bb;
-  background-color: #1274bb;
-  color: #FFFFFF;
-  font-size: 1vw;
-  font-weight: bold;
-  padding: 0.8vw 2vw;
-  box-shadow: 2px 12px 12px 2px rgba(0, 0, 0, 0.1);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: transform 80ms ease-in;    
-  margin: 1vw;              
-}
+    background-color: #1274BB; 
+    border-radius: 20px;
+    border: 1px solid #1274BB;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    box-shadow: 2px 12px 12px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;                 
+  }
+  .btn-style:hover{
+    background-color: #208ad7;
+  }
+  .btn-style:active{
+    transform: scale(0.95);
+  }
+  .btn-exit:active{
+    transform: scale(0.95);
+  }
 
 .btn-style:hover{
   background-color: #3592d5;
   border-color: #3592d5;
 }
 
-.biografia-text{
-    width: 55rem;
-    height: auto;
-    word-break: break-all;
+/*Body Modal*/ 
+
+.modal-body{
+    background-color: #DAE8EC;
+}
+.modal-header, .modal-footer{
+    background-color: #E2EDEF;
+}
+h1{
+    font-size: 2vw;
+    color: #D9DCF1;
+    background-color: #1274BB;
+    padding: 0.3vw 1vw;
+    border: 1px solid #1274BB;
+    border-radius: 3vw;
+    width: 10vw;
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.3);
 }

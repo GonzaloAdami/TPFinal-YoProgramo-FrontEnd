@@ -20,12 +20,13 @@
     <nav class="navbar navbar-expand-lg "><!--Navar-->
         <div class="container-fluid">
           <ul id="redes">
-            <app-social [color]="'#2169D0'" [color2]="'#37B4D3'" [name]="'Facebook'" [clase]="'fa fa-facebook'" [display]="'on'" [link]="'https://www.facebook.com/'"></app-social>
-            <app-social [color]="'#DC67CF'" [color2]="'#A428BA'" [name]="'Instagram'" [clase]="'fa fa-instagram'" [display]="'on'" [link]="'https://www.instagram.com/'"></app-social>  
-            <app-social [color]="'#131BCC'" [color2]="'#135CCC'" [name]="'LinkedIn'" [clase]="'fa fa-linkedin'" [display]="'on'" [link]="'https://www.linkedin.com/'"></app-social>  
-            <app-social [color]="'#31314D'" [color2]="'#323234'" [name]="'Github'" [imagen]="'../../assets/img/github.png'" [link]="'https://github.com/'" ></app-social>   
-            <app-social [color]="'#67B5DC'" [color2]="'#85CEF3'" [name]="'Twitter'" [clase]="'fa fa-twitter'" [display]="'on'" [link]="'https://twitter.com/'"></app-social> 
-            <app-social [color]="'#31314D'" [color2]="'#323234'" [name]="'Login'" [imagen]="'../../assets/img/login.png'" [link]="'./login'"></app-social>       
+            <app-social [color]="'#2169D0'" [color2]="'#37B4D3'" [name]="'Facebook'" [clase]="'fa fa-facebook'" [display]="'on'" [link]="this.facebook" [target]="'_blank'"></app-social>
+            <app-social [color]="'#DC67CF'" [color2]="'#A428BA'" [name]="'Instagram'" [clase]="'fa fa-instagram'" [display]="'on'" [link]="this.instagram" [target]="'_blank'"></app-social>  
+            <app-social [color]="'#131BCC'" [color2]="'#135CCC'" [name]="'LinkedIn'" [clase]="'fa fa-linkedin'" [display]="'on'" [link]="this.linkedin" [target]="'_blank'"></app-social>  
+            <app-social [color]="'#31314D'" [color2]="'#323234'" [name]="'Github'" [imagen]="'../../assets/img/github.webp'" [link]="this.github" [target]="'_blank'"></app-social>   
+            <app-social [color]="'#67B5DC'" [color2]="'#85CEF3'" [name]="'Twitter'" [clase]="'fa fa-twitter'" [display]="'on'" [link]="this.twitter" [target]="'_blank'"></app-social>
+            <app-social [color]="'#252424'" [color2]="'#464242'" [name]="'Setting'" [imagen]="'../../assets/img/config.webp'" [modal]="'#config'" [linkDisplay]="'on'" [modalDisplay]="'off'"></app-social>  
+            <app-social [color]="'#31314D'" [color2]="'#323234'" [name]="'Exit'" [imagen]="'../../assets/img/login.webp'" [link]="'./login'"></app-social>       
             
           </ul>
         </div>
@@ -285,9 +286,32 @@
               </div>    
             </div>   
           </div>           
-       
         </div>  
 
+        <div class="modal fade" id="config" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1>Configuracion</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              
+                <div class="modal-body config-container" style="background-color: rgb(218, 232, 236);">
+                  <app-icono [img]="'../../assets/img/twitter.webp'" [color]="'#01C6F1'" [color2]="'#0D7DEB'" id="twitter" (twitterEvent)="twitterFunction($event)" [displayTwitter]="'off'"></app-icono>
+                  <app-icono [img]="'../../assets/img/github.webp'" [color]="'#FFFFFF'" [color2]="'#E5F1F5'" id="github" (githubEvent)="githubFunction($event)" [displayGithub]="'off'"></app-icono>
+                  <app-icono [img]="'../../assets/img/facebook.webp'" [color]="'#2169D0'" [color2]="'#37B4D3'" id="facebook" (facebookEvent)="facebookFunction($event)" [displayFacebook]="'off'"></app-icono>
+                  <app-icono [img]="'../../assets/img/instagram.webp'" [color]="'#F9BF66'" [color2]="'#785AA4'" id="instagram" (instagramEvent)="instagramFunction($event)" [displayInstagram]="'off'"></app-icono>
+                  <app-icono [img]="'../../assets/img/linkedin.webp'" [color]="'#0370AC'" [color2]="'#27A1E4'" id="linkedin" (linkedinEvent)="linkedinFunction($event)" [displayLinkedin]="'off'"></app-icono>
+                  
+                </div>
+              <div class="modal-footer">
+                <button type="button" class="btn-exit" data-bs-toggle="modal">Cerrar</button>
+                <button type="submit" class="btn-style" data-bs-dismiss="modal" (click)="configuracionLink();" id="configButton">Publicar</button>
+              </div> 
+              
+              </div>
+            </div>
+         </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 

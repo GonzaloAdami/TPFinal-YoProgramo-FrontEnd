@@ -6,7 +6,8 @@
     flex-direction: column;
     height: 100vw;
     left: -10px;
-    z-index: 10;
+    z-index: 1;
+    
 }
 #ulFunction {
     margin: 0;
@@ -87,6 +88,11 @@ ul li:hover i {
     font-size: 0.2vw;
     transition-delay: 0.25s;
 }
+ul li:hover img {
+    transform: scale(0);
+    font-size: 0.2vw;
+    transition-delay: 0.25s;
+}
 
 ul li span {
     position: absolute;
@@ -107,3 +113,25 @@ ul li:hover .titulo {
     transform: scale(1);
     transition-delay: 0.25s;
 }
+
+img{
+    transition: 0.5s;
+    transition-delay: 0.25s;
+}
+
+.config-container input{
+    border-radius: 1vw;
+    margin-left: 1vw;
+    border: none;
+    width: 20vw;
+    padding-left: 0.5vw;
+    transition: 0.25s;
+  }
+  .config-container input:focus{
+    border-radius: 1vw;
+    margin-left: 1vw;
+    outline: none;
+    border: 1px solid rgb(0, 166, 255);
+    width: 30vw;
+    padding-left:1vw ;
+  }

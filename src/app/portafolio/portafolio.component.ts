@@ -15,17 +15,31 @@ export class PortafolioComponent implements OnInit {
   parentValue: number = 0;
   resultado: number = 0;
   encuesta: number = 0;
+ @Input() instagram: string = "";
+ @Input() twitter: string = "";
+ @Input()  github: string = "";
+ @Input()  facebook: string = "";
+ @Input()  linkedin: string = "";
 
   @Output() pushProfile =  new EventEmitter<string>();
   @Output() encuestaReset = new EventEmitter<number>();
  
   constructor(private http: HttpClient) {
-    this.profile = '../../assets/img/perfil.gif';
+    this.profile = '../../assets/img/perfil.webp';
     this.encuesta = 3;
     this.porcentaje = 0;
+    this.instagram = "https://www.instagram.com"
+    this.twitter = "https://www.twitter.com"
+    this.github = "https://www.github.com"
+    this.facebook = "https://www.facebook.com"
+    this.linkedin = "https://www.linkedin.com"
   }
   
+  configuracionLink() {
+    console.log("links cambiados")
   
+    console.log("El link ahora es" + this.instagram)
+  }
   resetEncuesta() {
     this.encuesta = this.encuesta*0;
   }
@@ -77,8 +91,22 @@ export class PortafolioComponent implements OnInit {
     return this.http.get<any>('https://backend-0vro.onrender.com');
   }
 
- 
-
+  textoRecibido: string = '';
+  twitterFunction(e:string){
+    this.twitter = e;
+  }
+  githubFunction(e:string){
+this.github = e;
+  }
+  facebookFunction(e:string){
+    this.facebook = e;
+  }
+  instagramFunction(e:string){
+this.instagram = e;
+  }
+  linkedinFunction(e:string){
+    this.linkedin = e;
+  } 
   //saberValorCirculo(porcentaje: number) {
     //porcentaje = (porcentaje / 25) * 118;
     //console.log(porcentaje);

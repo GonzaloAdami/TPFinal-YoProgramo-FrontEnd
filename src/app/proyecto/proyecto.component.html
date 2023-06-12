@@ -1,5 +1,5 @@
-<h3 class="titulo justify-content-center d-flex">Proyectos</h3>
-<p class="texto justify-content-center d-flex">Añade tu Educacion.</p>
+<h1 class="titulo justify-content-center d-flex">Proyectos</h1>
+
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators" id="agregarLista">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -10,7 +10,7 @@
     <div class="carousel-item active">
       <div class="d-flex justify-content-center">
         <div class="card card-style " data-bs-toggle="modal" data-bs-target="#card-modal">
-          <img src="../../assets/img/proyect-new.png" class="card-img-top" alt="Slide 1" >
+          <img src="../../assets/img/proyect-new.webp" class="card-img-top" alt="Slide 1" >
           <div class="card-body">
             <p class="card-text">¡Sube ya tu nuevo proyecto!</p>
             <button type="button" class="btn-style">Ver el proyecto</button>
@@ -21,7 +21,7 @@
     <div class="carousel-item">
       <div class="d-flex justify-content-center">
         <div class="card card-style " data-bs-toggle="modal" data-bs-target="#card-modal">
-          <img src="../../assets/img/proyect-new.png" class="card-img-top" alt="Slide 1" >
+          <img src="../../assets/img/proyect-new.webp" class="card-img-top" alt="Slide 1" >
           <div class="card-body">
             <p class="card-text">¡Sube ya tu nuevo proyecto!</p>
             <button type="button" class="btn-style">Ver el proyecto</button>
@@ -32,7 +32,7 @@
     <div class="carousel-item">
       <div class="d-flex justify-content-center">
         <div class="card card-style " data-bs-toggle="modal" data-bs-target="#card-modal">
-          <img src="../../assets/img/proyect-new.png" class="card-img-top" alt="Slide 1" >
+          <img src="../../assets/img/proyect-new.webp" class="card-img-top" alt="Slide 1" >
           <div class="card-body">
             <p class="card-text">¡Sube ya tu nuevo proyecto!</p>
             <button type="button" class="btn-style" data-bs-toggle="link" data-bs-target="#link">Ver el proyecto</button>
@@ -56,14 +56,12 @@
 
 <div class="modal fade" id="link" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
   <div class="modal-dialog "  >
-    <div class="modal-content" style="border-radius: 20px; background-color: #ffffff;">
-      <div class="modal-header" style="background-image: url(../../assets/img/banner.png);  border-radius:  20px; height: 100px;" >
-        <h1 class="modal-title" id="staticBackdropLabel" style="font-size: 20px; padding: 0px 30px; background-color: rgb(58, 127, 191);">Link</h1>
-      </div>
-      <div class="modal-body" style="background-color: #ffffff; border-radius: 0px 0px 20px 20px;" >
-        <div class="link-proyect d-flex justify-content-center">
-          <textarea name="" id="href" cols="55" rows="1" class="link-text" placeholder="Pega el link de tu proyecto..."></textarea>
-        </div>
+    <div class="modal-content">
+      <div class="modal-body"  style="border-radius: 20px 20px 0px 0px;">
+        <h1  id="staticBackdropLabel" class="link">Link</h1>
+        
+          <textarea name="" id="href" cols="65" rows="1" class="link-text" placeholder="Pega el link de tu proyecto..."></textarea>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn-exit" data-bs-toggle="modal" data-bs-target="#card-modal">Cerrar</button>
@@ -90,7 +88,7 @@
               <label for="imagenUpdate">
                 <img src="{{upload}}" class="card-img-top" alt="edit" id="moda-card">
                 
-                  <input type="file" id="imagenUpdate" name="img"  (change)="updateProfile($event)">
+                  <input type="file" id="imagenUpdate" name="img" class="descripcion" (change)="updateProfile($event)">
                 
               </label>
             </div>

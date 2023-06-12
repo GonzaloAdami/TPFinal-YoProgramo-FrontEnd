@@ -1,0 +1,15 @@
+.iconoGlobal{
+    width: 3vw;
+    height: 3vw;
+    background: linear-gradient(45deg, var(--i), var(--j));
+    padding: 0.3vw;
+    border-radius: 50%;
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.8);
+    margin-top: 1vw;
+  }
+  .on{
+    display: none;
+  }
+
+  
+  
