@@ -15,7 +15,7 @@
     
 </head>
 <body>
-
+<div *ngIf="userName">Usuario: {{userName}}</div>
  <section> <!--  Navbar  -->
     <nav class="navbar navbar-expand-lg "><!--Navar-->
         <div class="container-fluid">
@@ -33,7 +33,7 @@
     </nav>
 </section>
 <section class="perfil-usuario">    <!--Portada-->  
-  <app-portada (UpdateProfile)="handleUpdateProfile($event)"></app-portada>
+  <app-portada (UpdateProfile)="handleUpdateProfile($event)" [nombre]="this.nameUser"></app-portada>
 </section>                
 <section class="mt">         <!--Biografia-->
   <div class="box">
@@ -66,7 +66,7 @@
     <div style="display: flex; justify-content: center;">
       <div class="contenedor-skills">
         <div style="display: block;">
-          <app-circulo descripcion="HTML5" [porcentaje]="resultado"></app-circulo>
+          <app-circulo descripcion="HTML5" [porcentaje]="this.resultado"></app-circulo>
           <app-circulo descripcion="CSS3"></app-circulo>
           <app-circulo descripcion="JavaScript"></app-circulo>
           <app-circulo descripcion="Java"></app-circulo>
@@ -281,8 +281,8 @@
                 </div>    
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn-exit" data-bs-toggle="modal">Cerrar</button>
-                <button type="button" class="btn-style" data-bs-dismiss="modal" onclick="skillPulic();" id="skillButton">Publicar</button>
+                <button type="button" class="btn-exit" data-bs-toggle="modal">Salir</button>
+                
               </div>    
             </div>   
           </div>           

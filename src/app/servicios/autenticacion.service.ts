@@ -10,7 +10,7 @@ export class AutenticacionService{
   url="https://backend-0vro.onrender.com";
   currentUserSubject: BehaviorSubject<any>;
   constructor(private http:HttpClient) {
-    console.log("Todo piola");
+    console.log("200 OK");
     this.currentUserSubject= new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'));
    }
    InisiarSesion(credenciales:any):Observable<any>

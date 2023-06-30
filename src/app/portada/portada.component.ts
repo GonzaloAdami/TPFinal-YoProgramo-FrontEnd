@@ -19,14 +19,14 @@ export class PortadaComponent {
 @Output() banner: string = '../../assets/img/banner.webp';
 @Output() profile: string = '../../assets/img/perfil.webp';
 @Output() UpdateProfile =  new EventEmitter<string>();
-@Input() nombre: String = 'Usuario';
-usuario: any = usuariodatos;
+@Input() nombre: String = "";
 
+constructor() {
+  this.nombre = "user";
+}
 // Ejemplo de cómo emitir los datos al componente padre
 
-  constructor(private http: HttpClient) {
-    this.usuario = usuariodatos;
-  }
+ 
   sendProfile() {
     // Emitir el evento con un valor
    

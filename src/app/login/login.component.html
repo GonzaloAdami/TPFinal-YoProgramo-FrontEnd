@@ -30,7 +30,7 @@
                                                                               <!--LOGIN-->
     <div class="form-container sign-in-container">
       <div>
-        <form [formGroup]="form" (submit)="onEnviar()">
+        <form [formGroup]="form">
           <h1>Welcome</h1>
           <div class="social-container">
             <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -49,7 +49,7 @@
             <div *ngIf="form.controls['password'].errors?.['minlength']" class="errorMesagge">Debe tener al menos 8 caracteres.</div>
           </div>
           <a href="#">¿Olvidaste tu contraseña?</a>
-          <button type="submit" [disabled]="!form.valid" class="button">Login</button>
+          <button class="button"  (click)="login(form.value.email, form.value.password)">Login</button>
         </form>
         
       </div>

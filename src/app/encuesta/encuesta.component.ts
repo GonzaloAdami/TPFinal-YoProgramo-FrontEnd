@@ -105,7 +105,7 @@ export class EncuestaComponent implements OnInit {
       afirmativo - 118;
  
       this.pregunta = "";
-      this.opciones = '¡Felicidades!, completaste la this.i, tu resultado es : ' + afirmativo + '%';
+      this.opciones = '¡Felicidades!, completaste la  , tu resultado es : ' + afirmativo + '%';
       this.Correct = 'Compartir';
       this.Incorrect = 'Cancelar';
       this.porcentaje = 100;

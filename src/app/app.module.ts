@@ -23,6 +23,7 @@ import { IconoComponent } from './icono/icono.component';
 
 
 @NgModule({
+  
   declarations: [
     AppComponent,
     CirculoComponent,
